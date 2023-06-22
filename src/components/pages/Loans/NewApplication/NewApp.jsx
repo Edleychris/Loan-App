@@ -34,14 +34,14 @@ function NewApp() {
       <div className={css.loanheader}>
       <AppClients selectAll={selectAll} onAllCheckChange={handleAllCheckChange}/>
       </div>
-      <div className={css.infocontainer}>
+      {/* <div className={css.infocontainer}>
         <div className={css.infowrapper}>
           <div className={css.infoscroll}>
           <AppInfo selectedItems={selectedItems}
               onItemCheckChange={handleItemCheckChange}/>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
     

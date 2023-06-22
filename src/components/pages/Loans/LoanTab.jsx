@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import style from "./Tab.module.css";
-import NewApp from './NewApplication/NewApp';
+// import AppClients from './NewApplication/AppClients';
 import Pending from "./Pending/Pending";
 import Active from "./Active/Active";
 import DueLoans from "./DueLoans/DueLoans";
@@ -16,6 +16,7 @@ import { CSVLink } from "react-csv";
 import ReactToPrint from "react-to-print";
 import { useReactToPrint } from "react-to-print";
 import data from '../Loans/AllLoans/Data';
+import { AppClients } from "./NewApplication/AppClients";
 
 const LoanTab = () => {
   const [activeTab, setActiveTab] = useState("allLoans");
@@ -124,7 +125,8 @@ const LoanTab = () => {
 
         {/* Search  */}
       <div className={style.main_container}>
-       <div className={style.details_client_client}>
+        <div className={style.main_container__1}>
+        <div className={style.details_client_client}>
         <div className={style.component1_client_block}>
         <div className={style.component1_client}>
                    <div className={style.component101}>
@@ -191,6 +193,8 @@ const LoanTab = () => {
                 </div>
         </div>
        </div>
+        </div>
+
     </div>
 
 
@@ -254,7 +258,7 @@ const LoanTab = () => {
         {activeTab === "allLoans" && <div className={style.loan_tab_tab_content}>
         <Clients searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus} />
         </div>}
-        {activeTab === "newApp" && <div className={style.loan_tab_content}><NewApp /></div>}
+        {activeTab === "newApp" && <div className={style.loan_tab_content}><AppClients /></div>}
         {activeTab === "pending" && <div className={style.loan_tab_content}><Pending /></div>}
         {activeTab === "active" && <div className={style.loan_tab_content}><Active /></div>}
         {activeTab === "dueLoans" && <div className={style.loan_tab_content}><DueLoans /></div>}

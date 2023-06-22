@@ -29,10 +29,10 @@ export const Info = ({ selectedItems, onItemCheckChange }) => {
            } else if (item.status === "Declined") {
              statusStyle.backgroundColor = "red"
 
-          }else if (item.status === "Due"){
+          }else if (item.status === "Due") {
             statusStyle.backgroundColor = "#F3B516"
 
-          } else if (item.status === "Closed"){
+          } else if (item.status === "Closed") {
           statusStyle.backgroundColor = "#6A8FE5"
 
            } else {

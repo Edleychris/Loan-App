@@ -25,10 +25,6 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
     setCheckboxesChecked(newCheckboxesChecked);
   };
 
-  // const filteredData = filterStatus === 'All' ? data : data.filter((item) => item.status === filterStatus);
-  // const filteredData = filterStatus === data ? 'All' : data.filter((item) => item.status === filterStatus)
-  // const filteredData = filterStatus ? data.filter((item) => item.status === filterStatus)  : data;
-
 
   const filteredData = filterStatus === 'All' ? data : data.filter((item) => item.status === filterStatus);
   return (
@@ -67,9 +63,28 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
             return null;
           }
           const itemId = item.id;
+          let statusStyles = {};
+                
+          if (item.status === "Approved") {
+            statusStyles.backgroundColor = "#33DD64"
+
+          } else if (item.status === "Declined") {
+            statusStyles.backgroundColor = "red"
+
+         }else if (item.status === "Due"){
+           statusStyles.backgroundColor = "#F3B516"
+
+         } else if (item.status === "Closed"){
+         statusStyles.backgroundColor = "#6A8FE5"
+
+          } else {
+            statusStyles.backgroundColor = "Orange"
+            
+          }
+
 
           return (
-            <div key={itemId} className={`${styles.clientinfo} ${textColorClass}`}>
+            <div key={itemId} className={`${styles.clientinfo}`}>
               {checkboxesChecked[index] ? (
                 <CheckBoxIcon
                   className={styles.checkboxIcon}
@@ -89,20 +104,7 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
               <div>{item.applicationDate}</div>
               <div>{item.update}</div>
               <div
-                style={{
-                  color:
-                    item.status === 'Approved'
-                      ? '#00d43d'
-                      : item.status === 'Due'
-                      ? '#f3b516'
-                      : item.status === 'Declined'
-                      ? '#d30744'
-                      : item.status === 'Extended'
-                      ? 'blue'
-                      : item.status === 'Closed'
-                      ? '#010e2a'
-                      : 'yellow',
-                }}
+                style={statusStyles} className={styles.Loan__Status}
               >
                 {item.status}
               </div>

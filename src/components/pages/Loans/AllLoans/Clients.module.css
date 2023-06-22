@@ -1,53 +1,58 @@
 .clientsblock{
-  margin-top: -10px;
+  /* margin-top: -10px; */
   z-index: 6;
-  margin-left: -1.7rem;
-  padding-top: 1rem;
-
+  margin-top: 12rem;
+  /* margin-left: -1.7rem; */
+  /* padding-top: 1rem; */
   background-color: white;
-  /* padding-right: 10px; */
-  /* background-color: red; */
-  width: 1043px;
-  /* display: flex;
-  flex-direction: column; */
-  
+  /* height: 400px; */
+  width: 1040px;
 }
 .clientsdata___block{
   background-color: white;
+  /* background-color: pink; */
 color: white;
-  /* margin-left: -1rem; */
-  /* margin-top: -1rem; */
+margin-top: -1rem;
   position: fixed;
   width: 1040px;
-
 }
   .clientsdata{
-    
       display: flex;
-      /* width: 1090px; */
-    width: 1041px;
-      /* background-color: blue; */
-      /* padding: 5px; */
-      border: 0.5px solid rgb(145, 134, 134);
+    width: 1040px;
+      /* border: 0.5px solid rgb(145, 134, 134); */
+    border: 0.5px solid #6A8FE5;
       align-items: center;
-      /* justify-content: center; */
       color: black;
-    margin-left:.0rem;
+    /* margin-left:.0rem; */
   background-color: white;
-  /* padding-top: 1rem; */
+  border-radius: 5px;
+  justify-content: space-between;
+
   position: fixed;
   height: 3rem;
-    
-
-
   }  
+  .Loan__Status{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 20px;
+}
+.Loan__Status1{
+  color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 20px;
+}
   .clientsdata h3{
       font-size: 14px;
       font-weight: 700;
       color: black;
       width: 156px;
       margin-right: .6rem;
-
   }
   .checkboxIcon_1{
     padding: 0px 4px;
@@ -56,8 +61,7 @@ color: white;
   margin-left: .4rem;
   }
   .checkbox_12{
-    padding: 0px 4px;
-    margin: 0px 11px;
+    margin: 0px 21px;
   margin-left: .8rem;
   color: black;
   background-color: black;
@@ -68,8 +72,6 @@ color: white;
       margin: 0px 9px;
     color: black;
     margin-left: .4rem;
-    /* width: 10px; */
-
   }
   .checkbox2{
     padding: 0px 4px;
@@ -83,17 +85,25 @@ color: white;
 
 
 
-
   /* client info */
 
-
+.clientContainer_block_block_block{
+  padding-top: .5rem;
+  /* margin-top: 10rem; */
+}
   .clientinfo{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 5vh;
-    padding: 10px 0px;
-    margin-bottom: 5px;
+    /* margin-top: 8rem; */
+    padding: 25px 0px;
+    background-color: #F0F4FC;
+    margin-bottom: 15px;
+}
+.clientinfo:hover{
+  background-color: #8fa4d3;
+
 }
 .clientContainer{
   /* top: 12rem; */
@@ -105,8 +115,15 @@ color: white;
     font-size: 14px;
     color: #010e2a;
     font-weight: 500;
+    /* margin-top: 8rem; */
 }
-  
+.clientinfo div:nth-child(7){
+  /* background-color: red; */
+  width: 80px;
+  margin-right: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
   .darkPinkText {
     color: rgb(240, 9, 86); /* Set the desired text color for id=8 */
   }

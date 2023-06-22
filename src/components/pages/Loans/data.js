@@ -2,17 +2,17 @@
   const applicationdata = [
     {
     caseNumber: 'GGJDHD789DSJH', 
-    firstName: 'Temidayo',
-    LastName: 'Adebayo',
+    firstName: 'Dami',
+    LastName: 'Ade',
     applicationDate: '04/04/22023',
     update: '04/04/22023',       
-    status: 'Incomplete Docs',
+    status: 'Declined',
     id: 1
   },
   {
     caseNumber: 'GFHGDH789DSJH', 
-    firstName: 'Temidayo',
-    LastName: 'Adebayo',
+    firstName: 'Peace',
+    LastName: 'Trousers',
     applicationDate: '04/04/22023',
     update: '04/04/22023',       
     status: 'Docs. Reviewed',
@@ -20,8 +20,8 @@
   },
   {
     caseNumber: 'GGJDHD724DSJH', 
-    firstName: 'Temidayo',
-    LastName: 'Adebayo',
+    firstName: 'Sam',
+    LastName: 'jackson',
     applicationDate: '04/04/22023',
     update: '04/04/22023',       
     status: 'Incomplete Docs',
@@ -29,17 +29,17 @@
   },
   {
     caseNumber: 'GGJDHI78HGGJH', 
-    firstName: 'Temidayo',
-    LastName: 'Adebayo',
+    firstName: 'Sommadi',
+    LastName: 'Sommadi',
     applicationDate: '04/04/22023',
     update: '04/04/22023',       
-    status: 'Docs. Reviewed',
+    status: 'Declined',
     id: 4
   },
   {
     caseNumber: 'GGJDHI78HGGJH', 
-    firstName: 'Temidayo',
-    LastName: 'Adebayo',
+    firstName: 'Jay',
+    LastName: 'Jayson-Jay',
     applicationDate: '04/04/22023',
     update: '04/04/22023',       
     status: 'Docs. Reviewed',
@@ -47,8 +47,8 @@
   },
   {
     caseNumber: 'GGJDHI78HGGJH', 
-    firstName: 'Temidayo',
-    LastName: 'Adebayo',
+    firstName: 'Briggs',
+    LastName: 'Olanujula',
     applicationDate: '04/04/22023',
     update: '04/04/22023',       
     status: 'Docs. Reviewed',
@@ -56,7 +56,7 @@
   },
   {
     caseNumber: 'GGJDHI78HGGJH', 
-    firstName: 'Temidayo',
+    firstName: 'Nkiruka',
     LastName: 'Adebayo',
     applicationDate: '04/04/22023',
     update: '04/04/22023',       
@@ -65,12 +65,84 @@
   },
   {
     caseNumber: 'GGJDHI78HGGJH', 
-    firstName: 'Temidayo',
-    LastName: 'Adebayo',
+    firstName: 'Som Som',
+    LastName: 'John',
+    applicationDate: '04/04/22023',
+    update: '04/04/22023',       
+    status: 'Approved',
+    id: 8
+  },
+  {
+    caseNumber: 'GGJDHD789DSJH', 
+    firstName: 'Dami',
+    LastName: 'Ade',
     applicationDate: '04/04/22023',
     update: '04/04/22023',       
     status: 'Incomplete Docs',
-    id: 8
+    id: 9
+  },
+  {
+    caseNumber: 'GFHGDH789DSJH', 
+    firstName: 'Peace',
+    LastName: 'Trousers',
+    applicationDate: '04/04/22023',
+    update: '04/04/22023',       
+    status: 'Approved',
+    id: 10
+  },
+  {
+    caseNumber: 'GGJDHD724DSJH', 
+    firstName: 'Sam',
+    LastName: 'jackson',
+    applicationDate: '04/04/22023',
+    update: '04/04/22023',       
+    status: 'Incomplete Docs',
+    id: 11
+  },
+  {
+    caseNumber: 'GGJDHI78HGGJH', 
+    firstName: 'Sommadi',
+    LastName: 'Sommadi',
+    applicationDate: '04/04/22023',
+    update: '04/04/22023',       
+    status: 'Declined',
+    id: 12
+  },
+  {
+    caseNumber: 'GGJDHI78HGGJH', 
+    firstName: 'Jay',
+    LastName: 'Jayson-Jay',
+    applicationDate: '04/04/22023',
+    update: '04/04/22023',       
+    status: 'Docs. Reviewed',
+    id: 13
+  },
+  {
+    caseNumber: 'GGJDHI78HGGJH', 
+    firstName: 'Briggs',
+    LastName: 'Olanujula',
+    applicationDate: '04/04/22023',
+    update: '04/04/22023',       
+    status: 'Declined',
+    id: 14
+  },
+  {
+    caseNumber: 'GGJDHI78HGGJH', 
+    firstName: 'Nkiruka',
+    LastName: 'Adebayo',
+    applicationDate: '04/04/22023',
+    update: '04/04/22023',       
+    status: 'Docs. Reviewed',
+    id: 15
+  },
+  {
+    caseNumber: 'GGJDHI78HGGJH', 
+    firstName: 'Som Som',
+    LastName: 'John',
+    applicationDate: '04/04/22023',
+    update: '04/04/22023',       
+    status: 'Incomplete Docs',
+    id: 16
   },
   
   ]
