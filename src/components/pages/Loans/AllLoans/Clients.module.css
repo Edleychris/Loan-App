@@ -25,12 +25,36 @@ margin-top: -1rem;
       color: black;
     /* margin-left:.0rem; */
   background-color: white;
+  /* background-color: red; */
   border-radius: 5px;
   justify-content: space-between;
 
   position: fixed;
   height: 3rem;
   }  
+  .clientsdata011{
+    display: flex;
+    width: 1040px;
+      /* border: 0.5px solid rgb(145, 134, 134); */
+    border: 0.5px solid #6A8FE5;
+      align-items: center;
+      color: black;
+    margin-left:.4rem;
+  background-color: white;
+  /* background-color: red; */
+  border-radius: 5px;
+  justify-content: space-between;
+
+  position: fixed;
+  height: 3rem;
+  }
+  .clientsdata011 h3{
+    font-size: 14px;
+    font-weight: 700;
+    color: black;
+    width: 156px;
+    margin-right: .6rem;
+}
   .Loan__Status{
     color: white;
     display: flex;
@@ -100,6 +124,23 @@ margin-top: -1rem;
     padding: 25px 0px;
     background-color: #F0F4FC;
     margin-bottom: 15px;
+}
+.clientinfo__All{
+  display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5vh;
+    /* margin-top: 8rem; */
+    padding: 25px 0px;
+    background-color: #F0F4FC;
+    margin-bottom: 15px;
+}
+.clientinfo__All div{
+  width: 1200vw;
+    width: 14%;
+    font-size: 14px;
+    color: #010e2a;
+    font-weight: 500;
 }
 .clientinfo:hover{
   background-color: #8fa4d3;

@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import style from "./Tab.module.css";
 // import AppClients from './NewApplication/AppClients';
-import Pending from "./Pending/Pending";
+import {Pending} from "./Pending/Pending";
 import Active from "./Active/Active";
 import DueLoans from "./DueLoans/DueLoans";
 import Extended from "./Extended/Extended";
@@ -258,8 +258,8 @@ const LoanTab = () => {
         {activeTab === "allLoans" && <div className={style.loan_tab_tab_content}>
         <Clients searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus} />
         </div>}
-        {activeTab === "newApp" && <div className={style.loan_tab_content}><AppClients /></div>}
-        {activeTab === "pending" && <div className={style.loan_tab_content}><Pending /></div>}
+        {activeTab === "newApp" && <div className={style.loan_tab_content}><AppClients searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/></div>}
+        {activeTab === "pending" && <div className={style.loan_tab_content}><Pending searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/></div>}
         {activeTab === "active" && <div className={style.loan_tab_content}><Active /></div>}
         {activeTab === "dueLoans" && <div className={style.loan_tab_content}><DueLoans /></div>}
         {activeTab === "extended" && <div className={style.loan_tab_content}><Extended /></div>}
