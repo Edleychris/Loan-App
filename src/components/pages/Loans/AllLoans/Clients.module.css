@@ -65,6 +65,8 @@ margin-top: -1rem;
 }
 .Loan__Status1{
   color: white;
+  /* font-size: 10px; */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,17 +134,24 @@ margin-top: -1rem;
     height: 5vh;
     /* margin-top: 8rem; */
     padding: 25px 0px;
+    font-size: 14px;
+
     background-color: #F0F4FC;
     margin-bottom: 15px;
 }
 .clientinfo__All div{
   width: 1200vw;
-    width: 14%;
+    width: 13%;
     font-size: 14px;
     color: #010e2a;
     font-weight: 500;
 }
+
 .clientinfo:hover{
+  background-color: #8fa4d3;
+
+}
+.clientinfo__All:hover{
   background-color: #8fa4d3;
 
 }
@@ -159,8 +168,10 @@ margin-top: -1rem;
     /* margin-top: 8rem; */
 }
 .clientinfo div:nth-child(7){
-  /* background-color: red; */
+  /* background-color: red */
   width: 80px;
+  font-size: 10px;
+
   margin-right: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;

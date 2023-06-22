@@ -260,11 +260,11 @@ const LoanTab = () => {
         </div>}
         {activeTab === "newApp" && <div className={style.loan_tab_content}><AppClients searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/></div>}
         {activeTab === "pending" && <div className={style.loan_tab_content}><Pending searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/></div>}
-        {activeTab === "active" && <div className={style.loan_tab_content}><Active /></div>}
-        {activeTab === "dueLoans" && <div className={style.loan_tab_content}><DueLoans /></div>}
-        {activeTab === "extended" && <div className={style.loan_tab_content}><Extended /></div>}
-        {activeTab === "defaulted" && <div className={style.loan_tab_content}><Defaulted /> </div>}
-        {activeTab === "closed" && <div className={style.loan_tab_content}><Closed /> </div>}
+        {activeTab === "active" && <div className={style.loan_tab_content}><Active searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/></div>}
+        {activeTab === "dueLoans" && <div className={style.loan_tab_content}><DueLoans searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/></div>}
+        {activeTab === "extended" && <div className={style.loan_tab_content}><Extended searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/></div>}
+        {activeTab === "defaulted" && <div className={style.loan_tab_content}><Defaulted searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/> </div>}
+        {activeTab === "closed" && <div className={style.loan_tab_content}><Closed searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/> </div>}
       </div>
     </div>
    
