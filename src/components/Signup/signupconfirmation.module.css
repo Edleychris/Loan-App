@@ -1,0 +1,17 @@
+.confirmEmail{
+    background: #F0F4FC;
+    border: 2px solid #6A8FE5;
+    border-radius: 5px;
+    color: black;
+   
+    padding: 130px;
+    position: fixed;
+    
+    /* margin: 15rem 20rem 0rem 17rem; */
+    /* margin: 0 auto; */
+    /* height: 1400px; */
+    /* justify-content: center; */
+    /* margin-top: 3rem; */
+    /* padding-top: 8rem; */
+    /* width: 300px; */
+}

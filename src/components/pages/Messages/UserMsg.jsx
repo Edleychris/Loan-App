@@ -12,10 +12,10 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { app } from '../../../firebase';
 import Message from './Message';
 import msg from './message.module.css';
-import { BsEmojiSmile } from 'react-icons/bs';
+// import { BsEmojiSmile } from 'react-icons/bs';
 import { BiMicrophone } from 'react-icons/bi';
 import { AiOutlineSend, AiOutlineFileAdd } from 'react-icons/ai';
-import Picker from 'emoji-picker-react';
+// import Picker from 'emoji-picker-react';
 
 function UserMsg() {
   const [message, setMessage] = useState('');
@@ -211,12 +211,12 @@ function UserMsg() {
               />
             )}
             <div className={msg.user_Msg_input_icons}>
-              <BsEmojiSmile onClick={() => setShowPicker((val) => !val)} />
+              {/* <BsEmojiSmile onClick={() => setShowPicker((val) => !val)} />
               {showPicker && (
                 <div className={msg.emojiPickerContainer}>
                   <Picker onEmojiClick={onEmojiClick} />
                 </div>
-              )}
+              )} */}
               <label htmlFor="fileInput">
                 <AiOutlineFileAdd />
                 <input

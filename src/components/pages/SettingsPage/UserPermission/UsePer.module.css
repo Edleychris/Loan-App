@@ -1,0 +1,121 @@
+.clientinfo_setting{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* height: 5vh; */
+    padding: 10px 0px;
+    /* margin-top: -5rem; */
+    margin-bottom: 5px;
+    /* background-color: red; */
+    /* position: relative; */
+    /* margin-top: -20rem; */
+
+}
+
+.clientSettingsArea{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    /* background-color: red; */
+}
+
+.clientinfo_setting div{
+    width: 1200vw;
+    width: 15%;
+    font-size: 14px;
+    margin-top: 1rem;
+}
+/* .approvedBackground {
+    background: #F0F4FC;
+  } */
+
+.input{
+    width: 30px;
+    margin-right: -10px;
+}
+.arrowIcon_setting{
+    display: flex;
+    margin-left: -11rem;
+}
+.icon_setting{
+    margin-left: 8rem;
+}
+
+.dropicon{
+    width: 30px;
+    margin-right: -30px;
+    /* background-color: red; */
+}
+.iconBackground{
+    background: #F0F4FC;
+}
+.format_setting{
+    border: 1px solid grey;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    /* margin-top: 25px; */
+    margin-left: -2.5rem;
+    /* border-radius: 5px; */
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    gap: .5rem;
+    /* background-color: blue; */
+    background: #FFFFFF;
+
+    box-shadow: 0px 8px 24px -6px rgba(0, 0, 0, 0.16), 0px 0px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    /* width: 10%; */
+    text-align: left;
+    height: 9rem;
+
+}
+.format_setting p{
+    font-size: 14px;
+    margin-left: 1.5rem;
+    font-size: 13px;
+    margin-right: 1.5rem;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 500;
+    /* background-color: red; */
+}
+.format_setting p:hover{
+    background: #F0F4FC;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.format_setting i{
+    margin-left: 8.3rem;
+    /* color: red; */
+    font-size: 16px;
+}
+
+.checkbox_setting{
+    color: black;
+    width: 19px;
+}
+.text1__setting{
+    /* flex-direction: row; */
+    /* display: flex; */
+    align-items: center;
+    justify-content: left;
+    padding:0px 50px 5px 50px;
+    margin-top: 20px;
+    margin-left: -40px;
+    border-radius: 5px;
+    /* background-color: red; */
+}
+.iicon_setting{
+    margin-right: -2rem;
+    border-radius: 30%;
+    gap: 1rem;
+}
+.checkbox_setting, .checkboxIcon_setting{
+    width: 15px;
+    accent-color: black;
+}
+
+.action, .icon_setting{
+    color: #8D8787;
+  }

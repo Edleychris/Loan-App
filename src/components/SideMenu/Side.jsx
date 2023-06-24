@@ -20,7 +20,7 @@ function Side() {
   const handleLinkClick = (path) => {
     setActiveLink(path);
 
-    if (path.includes(activeLink)) {
+    if (path === '/dashboard') {
       return;
     }
 

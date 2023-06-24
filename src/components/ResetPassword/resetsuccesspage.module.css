@@ -1,0 +1,12 @@
+.resetPasswordLink{
+    padding: 12rem 45rem;
+    position: fixed;
+
+}
+
+.resetPasswordLink a{
+    color: #0744D3;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 5px;
+}

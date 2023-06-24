@@ -1,0 +1,29 @@
+.loans {
+    width: 1035px;
+    /* background-color: red; */
+    margin-top: -2rem;
+    height: 550px;
+  }
+  
+  .loanheader {
+    position: fixed;
+    top: 266.5px;
+    left: 264px;
+    right: 0;
+    padding: 10px;
+    z-index: 3;
+  }
+  .infocontainer {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  .info_scroll {
+    width: 1100px;
+    padding-top: 134px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-left: 0.5rem;
+    padding-right: -2.5rem;
+  }
+  

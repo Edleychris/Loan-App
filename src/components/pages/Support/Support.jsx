@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import sup from './support.module.css';
 import SupportComfirm from './SupportComfirm';
 import PhoneNumber from './PhoneNumber';
+import { BiChevronRight } from 'react-icons/bi';
 
 const Support = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -39,6 +40,11 @@ const Support = () => {
 
   return (
     <>
+      <div className={sup.supportNav}>
+       <Link to='/dashboard'>Home</Link>
+       <BiChevronRight className={sup.icon}/>
+       <Link to='#'>Support</Link>
+     </div>
       <section className={sup.support_container}>
         <div className={sup.support_cell}>
           <Link to='/support/faq'>
@@ -68,7 +74,7 @@ const Support = () => {
             {showMessage && (
               <div className={sup.toll__text_area}>
                 <textarea
-                  rows={10}
+                  rows={8}
                   value={message}
                   onChange={handleMessageChange}
                   className={sup.message_box}

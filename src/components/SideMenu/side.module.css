@@ -5,6 +5,7 @@
     background-color:#04297F;
     color: #fff;
   }
+
   .sidebarList ul{
     display: flex;
     flex-direction: column;

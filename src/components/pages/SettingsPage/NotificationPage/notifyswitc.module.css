@@ -1,0 +1,56 @@
+  .container {
+    position: relative;
+    width: 60px;
+    height: 32px;
+    /* background-color: red; */
+    background-color: rgb(211, 210, 210);
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+    padding: 1px 1px 1px 7px;
+    align-items: center;
+    display: flex;
+  }
+  
+  /* .active{
+    background-color: red;
+  } */
+  .iconContainer{
+    padding: 5px;
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .disableBlock{
+    background-color: white;
+    border-radius: 7px;
+    width: 25px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .disableIcon{
+    /* background-color: white;
+    border-radius: 7px; */
+    /* width: 22px; */
+    /* padding: 5px; */
+    /* font-size: 12px; */
+    transition: all 0.2s ease-in-out;
+    /* color: green; */
+  }
+  .Switch_icon{
+    font-size: 12px;
+  }
+  .active{
+    transition: all 0.4s ease-in-out;
+    background-color: white;
+    border-radius: 7px;
+    width: 22px;
+  }
+
+ 
+  

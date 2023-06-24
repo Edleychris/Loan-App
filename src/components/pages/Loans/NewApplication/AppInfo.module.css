@@ -1,0 +1,100 @@
+.clientinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5vh;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.clientinfo div{
+    width: 1200vw;
+    width: 15%;
+    font-size: 14px;
+}
+.approvedBackground {
+    background: #F0F4FC;
+  }
+
+.input{
+    width: 30px;
+    margin-right: -10px;
+}
+.arrowIcon{
+    display: flex;
+    margin-left: -11rem;
+}
+.icon{
+    margin-left: 8rem;
+}
+
+.dropicon{
+    width: 30px;
+    margin-right: -30px;
+    /* background-color: red; */
+}
+.iconBackground{
+    background: #F0F4FC;
+}
+.format{
+    border: 1px solid grey;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    margin-top: 25px;
+    margin-left: -30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    grid-area: 1rem;
+    padding-bottom: 1rem;
+    /* padding-left: 1rem; */
+    font-size: 12px;
+}
+.text1_1{
+    border: 1px solid grey;
+
+    padding:0px 40px 0px 90px;
+    border-radius: 20px;
+    color: black;
+    /* background-color: blue; */
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    /* font-size: 16px; */
+}
+.lastdrop{
+    /* font-size: 14px; */
+    padding-left: 5px;
+}
+.lastdrop p{
+    font-size: 11px;
+    margin-right: -7rem;
+}
+.text1_1 p{
+    font-size: 14px;
+    margin-left: -5.5rem;
+    font-size: 13px;
+    gap: 2rem;
+}
+.format i{
+    margin-left: 7rem;
+}
+
+.checkbox{
+    color: black;
+    width: 19px;
+    /* margin-left: -2rem; */
+}
+.text_1{
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    padding:0px 95px 5px 50px;
+    margin-top: 20px;
+    margin-left: -40px;
+    border-radius: 5px;
+}

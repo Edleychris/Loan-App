@@ -1,0 +1,37 @@
+.close{
+    display: flex;
+    justify-content: end;
+    
+}
+
+.close img{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.confirmationContainer{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    position: absolute;
+    border: 1px solid #04297F;
+    background: #FFFFFE;
+    bottom: -1px;
+    left: -4px;
+    width: 480px;
+    height: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.confirmation{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.confirmation p{
+    font-weight: 700;
+    font-size: 13px;
+}

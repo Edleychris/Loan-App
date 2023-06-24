@@ -1,0 +1,115 @@
+.bodyContainer{
+    color: #010E2A;
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(240, 244, 252, 0.8);
+    margin: 0;
+    padding: 0;
+
+}
+
+.sidepic{
+    height: 640px;
+    width: 498px;
+}
+.tokenForm{
+    margin-top: 2rem;
+    margin-left: 7rem;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:700px;
+    height: 100vh;
+    font-family: 'Extatica';
+    /* margin-left: -150px; */
+
+}
+.loanLogo{
+    /* background-color: red; */
+    margin-top: -18rem;
+    /* margin-right: 22rem; */
+    width: 600px;
+    /* height: 120px; */
+}
+
+.formtext{
+    font-family: 'Helvetica';
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #010E2A;
+    margin-bottom: 50px;
+    
+}
+       
+.input_field{
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-top: 2rem; */
+    width: 400px;
+}
+
+.gap{
+    
+    background-color: white;
+      padding: 20px 15px 24px 15px;
+      border-radius: 10px;
+}
+
+.tokendigit{
+    width: 40px;
+    height: 20px;
+    border-bottom: 2px solid #010E2A;
+    border-radius:0%;
+    text-align: center;
+  
+}
+
+.proceed{
+    margin-top: 2.5rem;
+    background-color: rgb(2, 2, 42);
+    border: none;
+    border-radius: 8px;
+    width: 354px;
+    height: 62px;
+    color: #FFFFFE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: center;
+
+}
+
+/* .span{
+    padding: 12px;
+    align-content: center;
+    width: 50px;
+    background-color: #010E2A;
+} */
+
+.logo{
+    height: 220px;
+    width: 150px;
+    background-color: transparent;
+    /* margin-top: -35rem; */
+}
+
+.error{
+    color: red;
+    font-size: 12px;
+}

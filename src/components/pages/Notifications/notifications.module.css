@@ -1,77 +1,56 @@
 .notif_container{
-    /* overflow-y: scroll; */
-    /* width: 76vw; */
-    /* margin-top: -95px; */
-    /* padding-top: 45px ; */
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 4rem;
 }
 .notify_header_div{
-    background-color: red;
     display: flex;
-    flex-direction: row;
-    width: 80px;
+    width: 90px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
-.bi-circle-fill{
-    /* gap: 1rem; */
-    background-color: red;
+.notify__setting__icon{
+    margin-left: 21px;
+    font-size: 18px;
 }
-a{
-    color: #1c4ec1;
+.notify__setting__icon a{
+    color: black;
 }
 .header_div{
-    /* display: flex;
+    display: flex;
     align-items: center;
     width: 100px;
-    gap: 1rem; */
-    /* justify-content: space-between; */
+    gap: 1rem;
+    justify-content: space-between;
 }
-/* 
 .number{
     background-color: #1c4ec1;
     padding: 3px 10px;
     border-radius: 5px;
     font-family: 1px;
+    margin-left: 10px;
 }
-
 .notif_header{
     display: flex;
     gap: 56rem;
     align-items: center;
     width: 100px;
     margin-bottom: 1rem;
-} */
-
-.chats{
-    /* font-family: 'Helvetica'; */
-    /* font-weight: 700; */
 }
-
 .number{
     color: white;
 }
-
 .notif_flex{
-    /* display: flex;
-    align-items: center;
-    gap: 30px; */
+    display: flex;
 }
-
 .borrower{
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
-
-.name_action, .time_type{
-    /* font-size: 14px;
-    font-family: 'Times New Roman', Times, serif; */
-}
-
-/* .time_type{
+.time_type{
     display: flex;
     color: rgb(156, 147, 147);
     align-items: center;
@@ -79,30 +58,46 @@ a{
     font-size: 14px;
     gap: .5rem;
 }
-
 .greydot{
-    font-size: 5px;
+    font-size: 25px;
 }
-
 .content_inner1{
-    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    margin: 1px 10px 10px 0px;
 }
-
 .inner_content2{
     display: flex;
     align-items: center;
-    gap: 32.2rem;
-} */
-
+    gap: 530px;
+}
 .bluedot{
     color: #1c4ec1;
-    /* font-size: 12px; */
-    background-color: red;
+    font-size: 32px;
 }
-
 .notif_column{
-    /* display: flex;
+    display: flex;
     width: 400px;
     flex-direction: column;
-    gap: 20px; */
+    margin-left: 10px;
+    margin-top: 10px;
+    gap: 15px;
+}
+.notify_overview{
+    background-color: rgba(240, 244, 252, 1);
+    height: 40px;
+    width: 1040px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 13;
+}
+.icon{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.notify_overview a{
+    color: black;
 }

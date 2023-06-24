@@ -1,0 +1,157 @@
+.prediction-block{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 90px;
+    margin-top: 1rem;
+    /* background-color: red; */
+    gap:1rem;
+    /* position: relative; */
+    /* overflow-x: auto; */
+    /* overflow-y: scroll; */
+    background-color: #FFFFFE;
+}
+
+.prediction{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 270px;
+    padding: 10px;
+    padding-bottom: 12px;
+    background: #F0F4FC;
+    border-bottom: 5px solid #0D99FF;
+    /* margin-right: 5px; */
+}
+
+
+.data-blue p, .data-green p, .data-yellow p, .data-red p{
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    /* margin-bottom: 7px; */
+}
+
+.percentage-block{
+    display: flex;
+    /* align-items: flex-start; */
+    align-items: baseline;
+}
+
+.percentage-block p{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.percent{
+    color:  hsl(0, 0%, 50%);
+    margin-left: 5px;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background-size: 100% 100%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+    background-repeat: no-repeat;
+    background-position: center center, left top, right top, left bottom, right bottom;
+    background-origin: content-box, border-box, border-box, border-box, border-box;
+    background-clip: content-box, border-box, border-box, border-box, border-box;
+    transform: rotate(1deg);
+}
+
+.circle p{
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    /* margin: 0 auto; */
+    /* align-self: center; */
+    /* align-items: center; */
+    /* position: absolute; */
+    /* left: 8px;
+    top: 10px; */
+}
+
+/* blue */
+
+
+
+.circle-blue{
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(30deg, #0D99FF 36%, #0D99FF 30%), 
+                      linear-gradient(120deg,#0D99FF 36%, #0D99FF 30%), 
+                      linear-gradient(300deg, #D9D9D9 36%, #D9D9D9 30%), 
+                      linear-gradient(210deg, #D9D9D9 36%, #D9D9D9 30%);
+}
+
+.blue{
+    color: #00D43D;
+    margin-top: 1rem;
+
+}
+
+/* green */
+
+.green-color{
+    border-bottom: 5px solid #00D43D;
+}
+
+.circle-green{
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(30deg, #00D43D 36%, #00D43D 30%), 
+                      linear-gradient(120deg,#00D43D 36%, #00D43D 30%), 
+                      linear-gradient(300deg, #D9D9D9 36%, #D9D9D9 30%), 
+                      linear-gradient(210deg, #D9D9D9 36%, #D9D9D9 30%);
+}
+
+.green{
+    color: #00D43D;
+    margin-top: 1rem;
+}
+
+/* yellow */
+.yellow-color{
+    border-bottom: 5px solid #F3B516;
+}
+
+.circle-yellow{
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(30deg, #F3B516 36%, #F3B516 30%), 
+                      linear-gradient(120deg,#F3B516 36%,  #F3B516 30%), 
+                      linear-gradient(300deg, #D9D9D9 36%, #D9D9D9 30%), 
+                      linear-gradient(210deg, #D9D9D9 36%, #D9D9D9 30%);
+}
+
+.yellow{
+    color:#F3B516;
+    margin-top: 1rem;
+
+}
+
+/* red */
+.red-color{
+    border-bottom: 5px solid #D30744;
+}
+
+.circle-red{
+    background-image: linear-gradient(white, white), 
+                      linear-gradient(30deg, #D30744 36%, #D30744 30%), 
+                      linear-gradient(120deg,#D30744 36%,  #D30744 30%), 
+                      linear-gradient(300deg, #D9D9D9 36%, #D9D9D9 30%), 
+                      linear-gradient(210deg, #D9D9D9 36%, #D9D9D9 30%);                  
+}
+
+.red{
+    color: #D30744;
+    margin-top: 1rem;
+
+}

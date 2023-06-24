@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import sup from './support.module.css';
-import { BiChevronDown } from 'react-icons/bi';
+import { BiChevronDown, BiChevronRight } from 'react-icons/bi';
+
+import { Link } from 'react-router-dom';
 
 const faqData = [
   {
@@ -37,6 +39,13 @@ export default function Faq () {
 
   return (
     <div>
+    <div className={sup.supportNav}>
+    <Link to='/dashboard'>Home</Link>
+    <BiChevronRight className={sup.icon}/>
+    <Link to='/support'>Support</Link>
+    <BiChevronRight className={sup.icon} />
+    <Link to='#'>FAQs</Link>
+   </div>
       <div className={sup.support__faq__block}>
         <h5 style={{fontWeight: 700, fontSize: 16,}}>FAQs</h5>
         {faqData.map((item, index) => (

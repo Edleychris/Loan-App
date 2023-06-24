@@ -1,0 +1,36 @@
+.formdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.input{
+    height: 34px;
+    text-indent: 10px;
+    font-size: 16x;
+}
+
+input:invalid[focused = "true"] ~ p{
+    display: block;
+}
+
+.input::placeholder{
+    font-size: 14px;
+}
+
+.error{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+label{
+    font-size: 14px;
+    margin-bottom: -10px;
+
+}
+
+input::-webkit-scrollbar{
+    display: none;
+}

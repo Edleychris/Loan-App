@@ -3,19 +3,31 @@ import data from './notifydata.jsx';
 import borrower from '../../../assets/active borrower avatar.png';
 import { Link } from 'react-router-dom';
 import {IoSettingsOutline} from 'react-icons/io5'
+import {BsDot} from 'react-icons/bs'
+import { RxDotFilled } from 'react-icons/rx'
+import { BiChevronRight } from "react-icons/bi";
 
 
 const Notifications = () => {
   return (
-    <section className={notify.notif_container}>
+    <div>
+      <div className={notify.notify_overview}>
+      <Link to='/dashboard'>Home</Link>
+          <BiChevronRight className={notify.icon}/>
+          <Link to='#'>All Notification</Link>
+      </div>
+ <section className={notify.notif_container}>
       <div className={notify.notif_header}>
         <div className={notify.notify_header_div}>
           <p className={notify.header_chats}>Clients</p>
           <span className={notify.number}>8</span>
         </div>
+        <div className={notify.notify__setting__icon}>
         <Link to='/settings/notifications'>
-        <IoSettingsOutline/>
+        <IoSettingsOutline />
         </Link>
+        </div>
+        
       </div>
 
       <div className={notify.content2}>
@@ -31,17 +43,19 @@ const Notifications = () => {
                   </p>
                   <div className={notify.time_type}>
                     <p>2 hrs. ago</p>
-                    <i className={`bi bi-circle-fill ${notify.greydot}`}></i>
+                    <BsDot className={notify.greydot} />
                     <p>Business Loan</p>
                   </div>
                 </div>
               </div>
             </div>
-            <i className={`bi bi-circle-fill ${notify.bluedot}`}></i>
+            < RxDotFilled className={notify.bluedot} />
           </div>
         ))}
       </div>
     </section>
+    </div>
+   
   );
 };
 

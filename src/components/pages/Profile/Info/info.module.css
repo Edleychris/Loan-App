@@ -1,0 +1,51 @@
+.clientinfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #F0F4FC;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    height: 50px;
+    width: 1040px;
+    overflow-x: hidden;
+}
+
+.clientinfo:hover{
+    background-color: #8fa4d3;
+}
+
+.infoContainer{
+    /* margin-top: 5rem; */
+    /* overflow-x: hidden; */
+    height: 460px;
+}
+.clientinfo div{
+    width: 15%;
+    font-size: 14px;
+    /* background-color: blue; */
+}
+
+.clientinfo div:nth-child(7){
+    width: 10%;
+    margin-right: 3rem;
+}
+
+.clientinfo .input{
+    width: 30px;
+    margin-right: -10px;
+}
+.checkbox{
+    /* background-color: red; */
+    width: 19px;
+}
+
+.LoanStatus{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    /* width: rem; */
+    padding: .5rem;
+    border-radius: 20px;
+}
