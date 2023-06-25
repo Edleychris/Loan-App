@@ -22,7 +22,7 @@ import LoanTab from './Loans/LoanTab';
 function PageContent() {
  
   return (
-      <div className='PageContent'>
+      <div >
         <Routes>
           <Route exact path="/dashboard" element={<Dashboard />} />
           <Route exact path="/messages" element={<Messages />} />

@@ -74,6 +74,8 @@ export const Pending = ({ selectAll, onAllCheckChange, searchQuery, setSearchQue
             } 
             else if (item.status === 'Pending') {
               statusStyles.backgroundColor = '#F3B516';
+              statusColor.textColor = '#fff';
+
             }
              else {
               statusStyles.backgroundColor = '#010E2A';

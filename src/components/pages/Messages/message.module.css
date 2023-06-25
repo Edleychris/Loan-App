@@ -35,7 +35,7 @@
 .userList_text1{
     display: flex;
     justify-content: space-between;
-    width: 900px;
+    width: 955px;
     align-items: center;
 }
 .userList img{
@@ -126,8 +126,6 @@ a{
     height: 500px;
     overflow-y: scroll;
     width: 1040px;
-    /* background-color: red; */
-
 }
 .user_Msg{
     width: 1040px;

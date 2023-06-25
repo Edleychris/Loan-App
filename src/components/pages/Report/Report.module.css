@@ -22,7 +22,6 @@
     overflow-y: scroll;
     display: flex;
     justify-content: space-between;
-    /* gap: 20px; */
     width: 1040px;
     position: relative;
     height: 55vw;
@@ -40,13 +39,10 @@
     width: 70px;
     font-weight: 500;
     color: light rgb(239, 236, 236);
-    /* background-color: red; */
 }
 .chart{
-    /* background-color: green; */
     width: 200px;
     margin-left: 16rem;
-    /* padding-top: 1rem; */
     position: relative;
     top: -5rem;
 }
@@ -60,7 +56,6 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    /* gap: 65px; */
     gap: 10px;
     text-align: left;
     align-items: left;
@@ -70,13 +65,12 @@
     display: flex;
     padding: 8px 16px;
     background: #FFFFFF;
-    border: 0.5px solid #000000;
+    border: 0.5px solid #6A8FE5;
     font-size: 15px;
     border-radius: 8px;
     margin-bottom: .5rem;
 }
 .nu{
-    /* gap: 0px; */
     padding: 8px 16px;
     font-size: 15px;
     font-weight: bold;
@@ -91,11 +85,8 @@
 }
 .default{
     margin-top: -6rem;
-    /* background-color: red; */
 }
 .payment{
-    /* background-color: purple; */
-    /* width: 518px; */
     height: 784px;
     top: 184px;
 }
@@ -128,6 +119,7 @@
 .year__year{
     padding: 10px 35px 10px 5px;
     border-radius: 8px;
+    border: 0.5px solid #6A8FE5;
     /* width: 150px; */
     outline: none;
 
@@ -137,14 +129,13 @@
     border-radius: 8px;
     /* width: 150px; */
     outline: none;
-
+    border: 0.5px solid #6A8FE5;
 }
 
 .year span:nth-child(2){
-    border: 1px solid black;
+    border: 0.5px solid #6A8FE5;
     padding: 5px 20px;
     background: #FFFFFF;
-    border: 1px solid #000000;
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -161,7 +152,7 @@
 display: flex;
 padding: 8px 5px;
 background: #FFFFFF;
-border: 0.5px solid #000000;
+border: 0.5px solid #6A8FE5;
 font-size: 15px;
 border-radius: 8px;
 }
@@ -174,11 +165,6 @@ font-size: 18px;
 line-height: 35px;
 color: #000000;
 }
-
-/* .nu{
-    margin-bottom: .5rem;
-} */
-
 .footer{
     display: flex;
     flex-direction: row;
@@ -194,7 +180,7 @@ color: #000000;
 .footertotal .total{
     margin-bottom: 1rem;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #000000, #000000), #000000;
-border: 0.5px solid #522935;
+border: 0.5px solid #6A8FE5;
 border-radius: 8px;
 }
 .first{
@@ -254,14 +240,12 @@ margin-bottom: 2rem;
 gap: 8px;
 padding-bottom: 8px;
 background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #000000, #000000), linear-gradient(0deg, #000000, #000000), #000000;
-border: 0.5px solid #D30744;
+border: 0.5px solid #6A8FE5;
 border-radius: 8px;
 }
 .payment{
-    background-color: purple;
     width: 485px;
     margin-top: 2rem;
-    /* top: 184px; */
     flex-direction: column;
     display: flex;
     background: #F0F4FC;
@@ -283,10 +267,9 @@ border-radius: 8px;
     font-weight: bolder;
 }
 .month span:nth-child(2){
-    border: 1px solid black;
+    border: 0.5px solid #6A8FE5;
     padding: 5px 20px;
     background: #FFFFFF;
-    border: 1px solid #000000;
     border-radius: 8px;
     display: flex;
     align-items: center;

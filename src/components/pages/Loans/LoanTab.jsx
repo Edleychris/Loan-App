@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import style from "./Tab.module.css";
-// import AppClients from './NewApplication/AppClients';
 import {Pending} from "./Pending/Pending";
 import {Active} from "./Active/Active";
 import {DueLoans} from "./DueLoans/DueLoans";
@@ -17,6 +16,10 @@ import ReactToPrint from "react-to-print";
 import { useReactToPrint } from "react-to-print";
 import data from '../Loans/AllLoans/Data';
 import { AppClients } from "./NewApplication/AppClients";
+import Navbar from "../../Header/Navbar";
+import Side from "../../SideMenu/Side";
+import "../../../App.css";
+
 
 const LoanTab = () => {
   const [activeTab, setActiveTab] = useState("allLoans");
@@ -113,7 +116,11 @@ const LoanTab = () => {
 
 
   return (
-    <div>
+    <div className="App">
+      <Navbar />
+      <div className="sideandpage">
+        <Side />
+    <div className="PageContent">
 
     <div className={style.loantabNav}>
     <Link to="/dashboard">Home</Link>
@@ -131,7 +138,7 @@ const LoanTab = () => {
         <div className={style.component1_client}>
                    <div className={style.component101}>
                    <BiSearch className={style.searchicon}/>
-                    <input type="text" placeholder='Muhammadu Buhari' className={style.search} value={searchQuery} onChange={handleSearch} />
+                    <input type="text" placeholder='Search' className={style.search} value={searchQuery} onChange={handleSearch} />
                    </div>
                     
 
@@ -266,6 +273,8 @@ const LoanTab = () => {
         {activeTab === "defaulted" && <div className={style.loan_tab_content}><Defaulted searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/> </div>}
         {activeTab === "closed" && <div className={style.loan_tab_content}><Closed searchQuery={searchQuery} setSearchQuery={setSearchQuery} filterStatus={filterStatus}/> </div>}
       </div>
+    </div>
+    </div>
     </div>
    
   );

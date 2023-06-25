@@ -93,26 +93,27 @@ const Login = () => {
                 <div>
                     <img src={business} alt="picture" className={styles.sidepic}/>
                 </div>
+                <div className={styles.right_login_page}>
                 <img src={logo} alt="logo" className={styles.logo}/>
 
-                <div className={styles.main}>
+                <div className={styles.main_login}>
 
                     <h2 className={styles.welcome}>Welcome Back</h2>
                    
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className={styles.login_form}>
    
                         <div className={styles.input}>
 
                             <div className={styles.username}>
-                                <label htmlFor="email" className={styles.form_label1}>Email</label>
-                                <input type="email" id='email' ref={userRef} autoComplete='off' onChange={(e) => setUser(e.target.value)} value={user} required className={styles.form_input}/>
+                                {/* <label htmlFor="email" className={styles.form_label1}>Email</label> */}
+                                <input type="email" id='email' ref={userRef} autoComplete='off' onChange={(e) => setUser(e.target.value)} value={user} required className={styles.form_input} placeholder='Email Address'/>
                                 <p className={styles.errMsg}>{errUser}</p>   
                             </div>
                             
 
                             <div className={styles.password}>
-                                <label htmlFor="password" className={styles.form_label2}>Password</label>
-                                <input type={showPassword ? 'text' : 'password'} id='password' onChange={(e) => setPwd(e.target.value)} value={pwd} required className={styles.form_input}/>
+                                {/* <label htmlFor="password" className={styles.form_label2}>Password</label> */}
+                                <input type={showPassword ? 'text' : 'password'} id='password' onChange={(e) => setPwd(e.target.value)} value={pwd} required className={styles.form_input} placeholder='Password'/>
                                 {showPassword ? (<BsEye onClick={showPwd} className={styles.login__icon}/>) : (<BsEyeSlash onClick={showPwd} className={styles.login__icon}/>)}
                                 <p className={styles.errMsg} aria-live='assertive'>{errMsg}</p>
                             </div>
@@ -135,6 +136,7 @@ const Login = () => {
                         <Link to='/signup' className={styles.signuplink}>Sign up</Link>
                         </div>
 
+                </div>
                 </div>
             </section>
 

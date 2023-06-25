@@ -6,19 +6,16 @@
   box-sizing: border-box;
   font-family: 'Helvetica';
 }
-
 .App{
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
 .Header{
 height: 60px;
 border-bottom: 1px solid black;
 position: fixed;
-/* width: 1440px; */
 width: 100vw;
 background: #FFFFFE;
 }
@@ -28,8 +25,6 @@ background: #FFFFFE;
   justify-content: flex-start;
   align-content: flex-start;
   margin-top: 60px;
-  
-  
 }
 .PageContent{
   display: flex;
@@ -37,10 +32,6 @@ background: #FFFFFE;
   height: 100%;
   overflow-y: auto;
   background-color: #FFFFFE;
-  /* background-color: red; */
   width: 1100px;
-  /* margin-top: 20px; */
-  /* padding: 40px; */
-  /* background-color: blue; */
   overflow-y: hidden;
 }

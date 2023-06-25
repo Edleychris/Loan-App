@@ -1,13 +1,10 @@
 .graphsContainer{
     padding-top: 60px;
     width: 1040px;
-    /* background-color: red; */
 }
-
 .graphsBlock_one, .graphsBlock_two{
     display: flex;
     justify-content: space-between;
-    /* gap: 4rem; */
 }
 
 .graphsBlock_two{
@@ -18,9 +15,6 @@
     width: 480px;
     background-color: rgba(240, 244, 252, 0.8);
     padding: 2rem;
-    
-    
-
 }
 
 .header{

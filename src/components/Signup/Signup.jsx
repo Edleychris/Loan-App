@@ -137,7 +137,9 @@ const onChange = (e)=>{
 
 
   return (
-  <div className={style.container}>
+  <div className={style.signup_container}>
+    <div className={style.signup_body}>
+      
         <div><img src={pic} alt="picture" className={style.sideimg}/></div>
 
         <section className={style.section}>
@@ -149,7 +151,7 @@ const onChange = (e)=>{
   </div>
 
     <div className={style.signup_details}>
-        <form onSubmit={createAccount} className={style.form}> 
+        <form onSubmit={createAccount} className={style.singup_form}> 
         {inputs.map((input)=>(
           <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} pattern={input.pattern} errorMessage={input.errorMessage} placeholder={input.placeholder}  className={style[`input-${input.name}`]} />
         ))}
@@ -171,6 +173,8 @@ const onChange = (e)=>{
 
  
  </section>
+    </div>
+    
     </div>
   )
 }

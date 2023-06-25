@@ -5,32 +5,23 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: background-color 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
     padding: 35px;
-    /* position: fixed; */
     margin: 4rem 20rem 0rem 17rem;
-    /* margin: 0 auto; */
-    /* height: 1400px; */
-    /* justify-content: center; */
-    /* margin-top: 3rem; */
     padding-top: 4rem;
     max-width: 400px;
     height: 90%;
 }
 .editPopUp_header_text h4{
-    /* margin-top: 8rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: green; */
 }
 
 .editPopUp_header {
-    /* background-color: red; */
     margin-top: 4rem;
 }
 .editPopUp_change_psw{
     background-color: blue;
-    /* margin-top: 8rem; */
 }
 .close{
     display: flex;
@@ -47,23 +38,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-bottom: 20px;
-    border: 1px solid black;
-    max-width: 340px;
-    background: #FFFFFE;
-    border-radius: 5px; */
-    /* border: 0.5px solid #FFFFFE; */
 }
 
 .editPasswordBlock, .editPasswordBlock_diff{
     margin-bottom: 10px;
-    /* border: 1px solid black; */
     max-width: 340px;
     background: #FFFFFE;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: background-color 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
     border-radius: 5px;
-    /* background-color: #EBEBEB; */
 }
 .editPasswordBlock_diff{
     width: 331px ;
@@ -71,28 +54,19 @@
 
 .editPasswordBlock input, .editPasswordBlock_diff input{
     width: 288px;
-    /* height: 40px; */
     outline: none;
-    /* border: 0.5px solid #EBEBEB; */
-    /* background-color: #EBEBEB; */
     border: none;
     padding: 25px 0px;
     margin: 0px 9px;
     height: 20px;
-    /* height: 35px;
-    width: 270px;
-    padding: 10px; */
 }
 .editPasswordBlock__icon{
-    /* background-color: red; */
-    /* padding: 5px; */
     font-size: 20px;
     margin-right: 15px;
 }
 .editPasswordBlock input::placeholder, .editPasswordBlock_diff input::placeholder{
    font-weight: 700;
    font-size: 14px;
-   /* line-height: 24px; */
    color: #717070;
    padding: 16px 0px 16px 0px;
 }
@@ -101,7 +75,6 @@
    background-color: #010E2A;
    color: white;
    border: 1px solid #010E2A;
-    /* padding: 15px 15px; */ 
     padding: 16px 0px 33px 16px;
     width: 335px;
     cursor: pointer;

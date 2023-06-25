@@ -1,7 +1,14 @@
-/* .resetPasswordLink{
-    padding: 1rem 42rem;
-} */
-.FogotcomfirmationContainer{
+.Resendclose{
+    display: flex;
+    justify-content: end;
+    /* background-color: red; */
+}
+.Resendclose img{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.ResendcomfirmationContainer{
     display: flex;
     justify-content: center;
     border-radius: 10px;
@@ -9,26 +16,18 @@
     position: absolute;
     border: 1px solid #04297F;
     background: #FFFFFE;
-    top: -2rem;
-    right: -2rem;
-    width: 550px;
-    height: 300px;
+    top: 13rem;
+    width: 500px;
+    height: 330px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: background-color 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Fogot_confirmation{
-    display: flex;
+.Resend_confirmation{
+    display: grid;
     place-items: center;
-    flex-direction: column;
-    gap: 20px;
 }
-.Fogot_reset_password{
-    color: #0744D3;
-    font-weight: 900;
-    font-size: 14px;
-}
-.Fogot_reset{
+.Resend_confirmation p{
     font-weight: 700;
     font-size: 16px;
 }

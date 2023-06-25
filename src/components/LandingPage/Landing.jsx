@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
-// import building from '../../assets/Buildings on onboarding page.jpg'
 import building from '../../assets/Buildings on onboarding page.jpg'
-// import logo from '../../assets/LOANIFY logo.svg'
-import logo from '../../assets/LOANIFY logo.svg'
+import logo from '../../assets/Group 7753.svg'
 import styles from './landing.module.css'
 import { useNavigate } from 'react-router-dom'
 
@@ -25,11 +23,10 @@ const Landing = () => {
     }, [navigate, redirect]);
    
   return (
-    <main>
+    <main className={styles.main}>
         <div className={styles.image}>
         <img src={building} alt="building" className={styles.img}/>
         </div>
-
         <div className={styles.text}>
             <img src={logo} alt="logo" className={styles.logo}/>
             <h4>Your one stop virtual assistant for the Loan Organization System</h4>

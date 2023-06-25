@@ -25,11 +25,11 @@ input:invalid[focused = "true"] ~ p{
     display: none;
 }
 
-label{
+/* label{
     font-size: 14px;
     margin-bottom: -10px;
 
-}
+} */
 
 input::-webkit-scrollbar{
     display: none;

@@ -38,7 +38,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink.includes('/dashboard') ? side.active : ''}`}
               onClick={() => handleLinkClick('/dashboard')} 
             >
-              <RiDashboard2Line className={side.icon} /> Dashboard
+              <RiDashboard2Line className={side.sideicon} /> Dashboard
             </Link>
           </li>
           <li>
@@ -47,7 +47,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink.includes('/loans') ? side.active : ''}`}
               onClick={() => handleLinkClick('/loans')} 
             >
-              <RiBitCoinLine className={side.icon} /> Loans
+              <RiBitCoinLine className={side.sideicon} /> Loans
             </Link>
           </li>
           <li>
@@ -56,7 +56,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink === '/profile' ? side.active : ''}`}
               onClick={() => handleLinkClick('/profile')} 
             >
-              <CgProfile className={side.icon} /> Profile
+              <CgProfile className={side.sideicon} /> Profile
             </Link>
           </li>
           <li>
@@ -65,7 +65,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink.includes('/messages') ? side.active : ''}`}
               onClick={() => handleLinkClick('/messages')} 
             >
-              <CgMail className={side.icon} /> Messages
+              <CgMail className={side.sideicon} /> Messages
             </Link>
           </li>
           <li>
@@ -74,7 +74,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink === '/notifications' ? side.active : ''}`}
               onClick={() => handleLinkClick('/notifications')}
             >
-              <IoIosNotificationsOutline className={side.icon} /> Notifications
+              <IoIosNotificationsOutline className={side.sideicon} /> Notifications
             </Link>
           </li>
           <li>
@@ -83,7 +83,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink.includes('/reports') ? side.active : ''}`}
               onClick={() => handleLinkClick('/reports')}
             >
-              <TbReportAnalytics className={side.icon} /> Reports
+              <TbReportAnalytics className={side.sideicon} /> Reports
             </Link>
           </li>
           <li>
@@ -92,7 +92,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink.includes('/clients') ? side.active : ''}`}
               onClick={() => handleLinkClick('/clients')}
             >
-              <TbUsers className={side.icon} /> Clients
+              <TbUsers className={side.sideicon} /> Clients
             </Link>
           </li>
           <li>
@@ -101,7 +101,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink.includes('/settings') ? side.active : ''}`}
               onClick={() => handleLinkClick('/settings')}
             >
-              <IoSettingsOutline className={side.icon} /> Settings
+              <IoSettingsOutline className={side.sideicon} /> Settings
             </Link>
           </li>
           <li>
@@ -110,7 +110,7 @@ function Side() {
               className={`${side.activeLink} ${activeLink.includes('/support') ? side.active : ''}`}
               onClick={() => handleLinkClick('/support')} 
             >
-              <FiLifeBuoy className={side.icon} /> Support
+              <FiLifeBuoy className={side.sideicon} /> Support
             </Link>
           </li>
         </ul>

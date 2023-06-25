@@ -14,26 +14,6 @@ export const Notification = () => {
         <Link to="#">notification</Link>
       </div>
 
-      <div className={style.settings_btn_container}>
-        <div className={style.settings_btn}>
-          <Link to="/settings" style={{ color: "#CCCCC0" }}>
-            General
-          </Link>
-          <Link to="/settings/profile" style={{ color: "#CCCCC0" }}>
-            Profile
-          </Link>
-          <Link to="/settings/userpermission" style={{ color: "#CCCCC0" }}>
-            User Permissions
-          </Link>
-          <Link to="/settings/notification" className={style.activeSetting}>
-            Notifications
-          </Link>
-          <Link to="/settings/security" style={{ color: "#CCCCC0" }}>
-            Security
-          </Link>
-        </div>
-      </div>
-
       <div className={style.notificationBlock}>
         <div className={style.emailNotificationBlock}>
           <div className={style.emailBlock}>

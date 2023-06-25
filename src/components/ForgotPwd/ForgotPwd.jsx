@@ -1,16 +1,25 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import forgot from './forgotpwd.module.css';
 import sidepic from '../images/business guy.png';
 import logo from '../../assets/Group 7753.svg';
 import { FgtPswdConfirm } from './FgtPswdConfirm';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Resend from './Resend';
 
 
 const INITIAL_STATE = {email: ''}
 const ForgotPwd = () => {
     const [form, setForm] = useState(INITIAL_STATE);
     const [showResetConfirmation, setShowResetConfirmation] = useState(false)
+    const [resendTimer, setResendTimer] = useState(null);
+    const [showResendLink, setShowResendLink] = useState(false);
+    useEffect(() => {
+        return () => {
+          clearTimeout(resendTimer);
+        };
+      }, [resendTimer]);
+      
 
     const [errorUI, setErrorUI] = useState(null);
 
@@ -53,12 +62,6 @@ const ForgotPwd = () => {
         }))
         console.log({id, value})
     }
-
-    // const handleSubmitClick =(e)=>{
-    //     e.preventDefault()
-    //     setShowResetConfirmation(true)
-    // }
-
     function handleSubmit(event) {
         event.preventDefault();
         const errorFields = getErrorFields(form);
@@ -69,6 +72,7 @@ const ForgotPwd = () => {
         console.log(`${form.email} ${form.password}`);
         setForm(INITIAL_STATE);
         setShowResetConfirmation(true); // Set the showResetConfirmation state to true
+        setShowResendLink(true)
    
         
     axios({
@@ -102,18 +106,18 @@ const ForgotPwd = () => {
 
     return (
         <div className={forgot.holder}>
+          <div className={forgot.holder_body} >
+
+         
             <div className={forgot.image}>
                 <img src={sidepic} alt="sidepic" className={forgot.sideimg} />
             </div>
+            <div className={forgot.right_side}>
+            <img src={logo} alt="logo" className={forgot._logo_forgot} />
 
-            <img src={logo} alt="logo" className={forgot.logo} />
-
-            <div className={forgot.forgot_details}>
-                <div className="forgot_text">
-                    <h1>Forgot Password?</h1>
-                </div>
-
-                <form action="submit" onSubmit={handleSubmit}>
+                <div className={forgot.forgot_details}>
+                    <h1 className={forgot.forgot_text}>Forgot Password?</h1>
+                <form action="submit" onSubmit={handleSubmit} className={forgot.forgot_form}>
                     <div className={forgot.email_input}>
                         <input
                             type="text"
@@ -133,18 +137,36 @@ const ForgotPwd = () => {
                     </div>
                     <span className={forgot.forgotPwdText}>Reset link will be sent to your email</span>
                     {showResetConfirmation ? (
-                        <FgtPswdConfirm />
-                    ) : (
-                        <>
-                            <button type="submit" className={forgot.reset_btn}>
-                                Submit
-                            </button>
-                            <Link to='/resetpassword' className={forgot.reset_link}>Resend reset link</Link>
-                        </>
-                    )}
+  <FgtPswdConfirm />
+) : (
+  <div>
+    <button type="submit" className={forgot.reset_btn}>
+      Submit
+    </button>
+
+    {showResendLink ? (
+      <Resend />
+    ) : (
+      <div
+        className={forgot.reset_link}
+        onClick={() => {
+          setShowResendLink(true);
+          setResendTimer(
+            setTimeout(() => {
+              setShowResendLink(false);
+            }, 3000)
+          );
+        }}
+      >
+        Resend reset link
+      </div>
+    )}
+  </div>
+)}
                 </form>
             </div>
-        </div>
+                </div> </div>
+            </div>
     );
 }
 

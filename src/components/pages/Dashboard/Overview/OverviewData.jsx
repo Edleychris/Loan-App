@@ -6,20 +6,23 @@ import { GoChevronUp, GoChevronDown } from 'react-icons/go'
         title:'All Loans',
         icon: <GoChevronUp/>,
         range: '15%',
-        amount: '250M'
+        rate: 'Increase',
+        amount: '1050'
     },
     {
         id: 2,
         title:'New Applications',
         icon: <GoChevronUp/>,
         range: '40%',
+        rate: 'Increase',
         amount: '35'
     },
     {
         id: 3,
         title:'Pending Loans',
-        icon: <GoChevronDown/>,
+        icon: <GoChevronUp/>,
         range: '5%',
+        rate: 'Increase',
         amount: '30'
     },
     {
@@ -27,35 +30,40 @@ import { GoChevronUp, GoChevronDown } from 'react-icons/go'
         title:'Active Loans',
         icon: <GoChevronUp/>,
         range: '12%',
+        rate: 'Increase',
         amount: '60'
     },
     {
         id: 5,
         title:'Due Loans',
         icon: <GoChevronUp/>,
-        range: '5%',
-        amount: '75M'
+        range: '12%',
+        rate: 'Increase',
+        amount: '30'
     },
     {
         id: 6,
         title:'Extended Loans',
         icon: <GoChevronUp/>,
         range: '8%',
-        amount: '22M'
+        rate: 'Increase',
+        amount: '35'
     },
     {
         id: 7,
         title:'Defaulted Loans',
         icon: <GoChevronDown/>,
         range: '10%',
-        amount: '35M'
+        rate: 'Decrease',
+        amount: '60'
     },
     {
         id: 8,
         title:'Closed Loans',
         icon: <GoChevronUp/>,
-        range: '45%',
-        amount: '98M'
+        range: '12%',
+        rate: 'Increase',
+        amount: '98'
     },
 
 ];

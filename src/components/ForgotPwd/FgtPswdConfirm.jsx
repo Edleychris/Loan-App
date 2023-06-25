@@ -1,17 +1,22 @@
-// import React from 'react'
-// import { ConfirmationPops } from '../ConfirmationPops/ConfirmationPops'
-import style from './fgtpswdconfirm.module.css'
+// import checked from '../../assets/Generic.svg'
 import { Link } from 'react-router-dom'
-// import { ComfirmationPsw } from '../SettingsPage/PopUps/Comfirmationpsw.jsx'
-import { ComfirmationPsw } from '../pages/SettingsPage/PopUps/Comfirmationpsw.jsx'
-import Comfirmation from '../Comfirm Page/Comfirmation'
-export const FgtPswdConfirm = () => {
+import style from './fgtpswdconfirm.module.css'
+// import {Link } from 'react-router-dom';
+
+export const FgtPswdConfirm = ({ message }) => {
   return (
-    <div className={style.resetPasswordLink}>
-       <Link to='/resetpassword'>
-       <Comfirmation message='Reset password link has been sent to your email.'/>
-       <Link to='/resetpaswword'>Reset Password</Link>
-     </Link>
+    <div className={style.FogotcomfirmationContainer}>
+      {/* <div className={style.close}>
+
+      </div> */}
+      <div className={style.Fogot_confirmation}>
+        <p className={style.Fogot_reset}>Reset password link has been sent to your email.</p>
+        {/* <img src={checked} alt='Checked mark'/> */}
+        <Link to='/resetpassword'>
+        <p className={style.Fogot_reset_password}>Reset Password</p>
+        
+        </Link>
+      </div>
     </div>
   )
 }

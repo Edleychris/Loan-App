@@ -1,16 +1,11 @@
 .clientsblock{
-  /* margin-top: -10px; */
   z-index: 6;
   margin-top: 12rem;
-  /* margin-left: -1.7rem; */
-  /* padding-top: 1rem; */
   background-color: white;
-  /* height: 400px; */
   width: 1040px;
 }
 .clientsdata___block{
   background-color: white;
-  /* background-color: pink; */
 color: white;
 margin-top: -1rem;
   position: fixed;
@@ -19,32 +14,25 @@ margin-top: -1rem;
   .clientsdata{
       display: flex;
     width: 1040px;
-      /* border: 0.5px solid rgb(145, 134, 134); */
     border: 0.5px solid #6A8FE5;
       align-items: center;
       color: black;
-    /* margin-left:.0rem; */
   background-color: white;
-  /* background-color: red; */
   border-radius: 5px;
   justify-content: space-between;
-
   position: fixed;
   height: 3rem;
   }  
   .clientsdata011{
     display: flex;
     width: 1040px;
-      /* border: 0.5px solid rgb(145, 134, 134); */
     border: 0.5px solid #6A8FE5;
       align-items: center;
       color: black;
     margin-left:.4rem;
   background-color: white;
-  /* background-color: red; */
   border-radius: 5px;
   justify-content: space-between;
-
   position: fixed;
   height: 3rem;
   }
@@ -65,8 +53,6 @@ margin-top: -1rem;
 }
 .Loan__Status1{
   color: white;
-  /* font-size: 10px; */
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,14 +101,12 @@ margin-top: -1rem;
 
 .clientContainer_block_block_block{
   padding-top: .5rem;
-  /* margin-top: 10rem; */
 }
   .clientinfo{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 5vh;
-    /* margin-top: 8rem; */
     padding: 25px 0px;
     background-color: #F0F4FC;
     margin-bottom: 15px;
@@ -132,10 +116,8 @@ margin-top: -1rem;
     align-items: center;
     justify-content: space-evenly;
     height: 5vh;
-    /* margin-top: 8rem; */
     padding: 25px 0px;
     font-size: 14px;
-
     background-color: #F0F4FC;
     margin-bottom: 15px;
 }
@@ -149,14 +131,11 @@ margin-top: -1rem;
 
 .clientinfo:hover{
   background-color: #8fa4d3;
-
 }
 .clientinfo__All:hover{
   background-color: #8fa4d3;
-
 }
 .clientContainer{
-  /* top: 12rem; */
   margin-top: 3.5rem;
 }
 .clientinfo div{
@@ -165,16 +144,13 @@ margin-top: -1rem;
     font-size: 14px;
     color: #010e2a;
     font-weight: 500;
-    /* margin-top: 8rem; */
 }
 .clientinfo div:nth-child(7){
-  /* background-color: red */
-  width: 80px;
-  font-size: 10px;
-
+  width: 100px;
   margin-right: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;
+  color: white;
 }
   .darkPinkText {
     color: rgb(240, 9, 86); /* Set the desired text color for id=8 */

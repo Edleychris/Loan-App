@@ -8,6 +8,8 @@
   font-weight: 700;
   position: fixed;
   z-index: 13;
+  margin-top: -5rem;
+
 }
 
 .userPermissionNav a{

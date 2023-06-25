@@ -1,4 +1,3 @@
-// Profile.jsx
 import { useState } from "react";
 import { User } from "./User/User";
 import { AllClients } from "./Allclients/AllClients";
@@ -8,6 +7,10 @@ import css from "./profilepage.module.css";
 import data from "./data/data";
 import { BiChevronRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import Navbar from "../../Header/Navbar";
+import Side from "../../SideMenu/Side";
+import "../../../App.css";
+
 
 function Profile() {
   const [selectAll, setSelectAll] = useState(false);
@@ -32,6 +35,12 @@ function Profile() {
   };
 
   return (
+    <div className="App">
+      <Navbar />
+      <div className="sideandpage">
+        <Side />
+        <div className="PageContent">
+
     <div className={css.ProfilePageBlock}>
       <div className={css.profileNav}>
         <Link to="/dashboard">Home</Link>
@@ -57,6 +66,9 @@ function Profile() {
           onItemCheckChange={handleItemCheckChange}
         />
       </div>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }

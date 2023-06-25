@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import style from "./profilesettings.module.css";
-import Avatar from "@mui/material/Avatar";
-import avatar from "../../../../assets/Avatar.png";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import profileData from "./ProfileData";
 import ParentSwitch from "../Switch/ParentSwitch";
 import { BiChevronRight, BiCamera } from "react-icons/bi";
@@ -95,25 +93,6 @@ export const ProfileSettings = () => {
         <Link to="/settings">Settings</Link>
         <BiChevronRight className={style.icon} />
         <Link to="#">Profile</Link>
-      </div>
-      <div className={style.settings_btn_container}>
-        <div className={style.settings_btn}>
-          <Link to="/settings" style={{ color: "#CCCCC0" }}>
-            General
-          </Link>
-          <Link to="/settings/profile" className={style.activeSetting}>
-            Profile
-          </Link>
-          <Link to="/settings/userpermission" style={{ color: "#CCCCC0" }}>
-            User Permissions
-          </Link>
-          <Link to="/settings/notification" style={{ color: "#CCCCC0" }}>
-            Notifications
-          </Link>
-          <Link to="/settings/security" style={{ color: "#CCCCC0" }}>
-            Security
-          </Link>
-        </div>
       </div>
 
       

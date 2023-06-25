@@ -5,6 +5,10 @@ import PGraph from "./PGraph";
 import { BiChevronRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import ReportData from "./ReportData";
+import "../../../App.css";
+import Navbar from '../../Header/Navbar';
+import Side from "../../SideMenu/Side";
+
 
 function Report() {
   const years = [];
@@ -28,14 +32,13 @@ function Report() {
     { value: "12", label: "December" },
   ];
 
-  // const years = [];
-  // const currentYear = new Date().getFullYear();
-  // for (let i = currentYear; i >= currentYear - 100; i--) {
-  //   years.push(i);
-  // }
 
   return (
-    <div>
+    <div className="App">
+      <Navbar />
+      <div className="sideandpage">
+        <Side />
+    <div className="PageContent">
       <div className={styles.reportsNav}>
         <Link to="/dashboard">Home</Link>
         <BiChevronRight className={styles.icon} />
@@ -150,6 +153,8 @@ function Report() {
           </div>
         );
       })}
+    </div>
+    </div>
     </div>
   );
 }

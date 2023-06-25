@@ -9,24 +9,6 @@
     justify-content: center;
     z-index: 99;
 }
-
-/* .nav_container {
-    position: fixed;
-    background: #FFFFFE;
-    align-items: center;
-    grid-area: navbar;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #FFFFFE;
-    padding: 24.5px;
-    margin-top: -1rem;
-    margin-left: -1rem;
-    width: 1325px;
-    height: 86px;
-    z-index: 1;
-    border: 1px solid black;
-} */
-
 .nav {
     display: flex;
     align-items: center;

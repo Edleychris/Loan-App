@@ -8,6 +8,7 @@
     font-weight: 700;
     position: fixed;
     z-index: 13;
+    margin-top: -8rem;
   }
   .profilesettingsNav a{
     color: #000;
@@ -18,27 +19,7 @@
   }
 
 /* Profile settings navigation */
-.profileSettingsNav{
-    display: flex;
-    align-items: center;
-    background-color: #F0F4FC;
-    width: 1040px;
-    height: 44px;
-    padding-left: 10px;
-}
 
-.profileSettingsNav a{
-    text-decoration: none;
-    color: #010E2A;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.arrowFoward{
-    height: 15px;
-    width: 10px;
-    padding: 5px;
-}
 .settings_btn{
     border: 1px solid #000000;
     display: flex;
@@ -158,7 +139,7 @@
     color: #297F04;
 } */
 
-button{
+.save_profile_btn_container button{
 width: 85px;
 height: 40px;
 border: 0.5px solid #010E2A;

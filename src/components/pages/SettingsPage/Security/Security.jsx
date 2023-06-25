@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import style from './security.module.css'
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 // import { ChangedPsw } from '../PopUps/ChangedPsw';
 import EmailData from './EmailData';
 import { BiChevronRight } from 'react-icons/bi';
@@ -34,16 +34,6 @@ export const Security = () => {
     <Link to="#">General</Link>
   </div>
 
-      <div className={style.settings_btn_container}>
-      <div className={style.settings_btn}>
-        <Link to='/settings' style={{color:'#CCCCC0'}}>General</Link>
-        <Link to='/settings/profile' style={{color:'#CCCCC0'}}>Profile</Link>
-        <Link to='/settings/userpermission' style={{color:'#CCCCC0'}}>User Permissions</Link>
-        <Link to='/settings/notification' style={{color:'#CCCCC0'}}>Notifications</Link>
-        <Link to='/settings/security' className={style.activeSetting}>Security</Link>
-      </div>
-      </div>
-     
 
       <div className={style.securityContainer}>
         <div className={style.general_set_Block}>
@@ -76,6 +66,8 @@ export const Security = () => {
           </div>
           <Link  path='/signup' className={style.delete}>Delete</Link>
         </div>
+        <Outlet />
+
       </div>
     </div>
   )

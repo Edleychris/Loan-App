@@ -7,6 +7,7 @@
 .notify_header_div{
     display: flex;
     width: 90px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,8 +37,13 @@
     display: flex;
     gap: 56rem;
     align-items: center;
-    width: 100px;
-    margin-bottom: 1rem;
+    margin-top: -2rem;
+    /* margin-bottom: 1rem; */
+    padding-bottom: 5px;
+    padding-top: 2rem;
+    border-bottom: 0.5px solid #f0f4fc;
+    background-color: white;
+    position: fixed;
 }
 .number{
     color: white;
@@ -70,6 +76,7 @@
     display: flex;
     align-items: center;
     gap: 530px;
+    margin-bottom: .5rem;
 }
 .bluedot{
     color: #1c4ec1;
@@ -100,4 +107,7 @@
 }
 .notify_overview a{
     color: black;
+}
+.content2{
+    margin-top: 3rem;
 }

@@ -2,7 +2,6 @@
     position: relative;
     width: 60px;
     height: 32px;
-    /* background-color: red; */
     background-color: rgb(211, 210, 210);
     cursor: pointer;
     user-select: none;
@@ -11,10 +10,7 @@
     align-items: center;
     display: flex;
   }
-  
-  /* .active{
-    background-color: red;
-  } */
+
   .iconContainer{
     padding: 5px;
     width: 50px;
@@ -34,13 +30,7 @@
   }
 
   .disableIcon{
-    /* background-color: white;
-    border-radius: 7px; */
-    /* width: 22px; */
-    /* padding: 5px; */
-    /* font-size: 12px; */
     transition: all 0.2s ease-in-out;
-    /* color: green; */
   }
   .Switch_icon{
     font-size: 12px;

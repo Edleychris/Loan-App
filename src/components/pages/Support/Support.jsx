@@ -5,6 +5,10 @@ import sup from './support.module.css';
 import SupportComfirm from './SupportComfirm';
 import PhoneNumber from './PhoneNumber';
 import { BiChevronRight } from 'react-icons/bi';
+import Navbar from "../../Header/Navbar";
+import Side from "../../SideMenu/Side";
+import "../../../App.css";
+
 
 const Support = () => {
   const [showMessage, setShowMessage] = useState(false);
@@ -39,7 +43,11 @@ const Support = () => {
   }, [showConfirmation]);
 
   return (
-    <>
+     <div className="App">
+      <Navbar />
+      <div className="sideandpage">
+        <Side />
+    <div className="PageContent">
       <div className={sup.supportNav}>
        <Link to='/dashboard'>Home</Link>
        <BiChevronRight className={sup.icon}/>
@@ -74,10 +82,11 @@ const Support = () => {
             {showMessage && (
               <div className={sup.toll__text_area}>
                 <textarea
-                  rows={8}
+                  rows={5}
                   value={message}
                   onChange={handleMessageChange}
                   className={sup.message_box}
+                  style={{padding: '10px', fontSize: '20px'}}
                 ></textarea>
                 <button onClick={handleSendMessage} className={sup.message_box_button}>
                   Send
@@ -88,7 +97,10 @@ const Support = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
+            </div>
+            </div>
+
   );
 };
 

@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import sup from './support.module.css';
 import { BiChevronDown, BiChevronRight } from 'react-icons/bi';
+import Navbar from "../../Header/Navbar";
+import Side from "../../SideMenu/Side";
+import "../../../App.css";
 
 import { Link } from 'react-router-dom';
 
@@ -39,6 +42,12 @@ export default function Faq () {
 
   return (
     <div>
+   
+   <div className="App">
+      <Navbar />
+      <div className="sideandpage">
+        <Side />
+    <div className="PageContent">
     <div className={sup.supportNav}>
     <Link to='/dashboard'>Home</Link>
     <BiChevronRight className={sup.icon}/>
@@ -69,6 +78,9 @@ export default function Faq () {
           </div>
         ))}
       </div>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }

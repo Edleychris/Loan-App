@@ -16,6 +16,12 @@ import msg from './message.module.css';
 import { BiMicrophone } from 'react-icons/bi';
 import { AiOutlineSend, AiOutlineFileAdd } from 'react-icons/ai';
 // import Picker from 'emoji-picker-react';
+import { BiChevronRight } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import Navbar from "../../Header/Navbar";
+import Side from "../../SideMenu/Side";
+import "../../../App.css";
+
 
 function UserMsg() {
   const [message, setMessage] = useState('');
@@ -175,7 +181,18 @@ function UserMsg() {
   };
 
   return (
-    <div>
+    <div className="App">
+    <Navbar />
+    <div className="sideandpage">
+      <Side />
+  <div className="PageContent">
+      <div className={msg.messageNav}>
+          <Link to='/dashboard'>Home</Link>
+          <BiChevronRight className={msg.icon}/>
+          <Link to='/messages'>All messages</Link>
+          <BiChevronRight className={msg.icon}/>
+          <Link to='#'>Message</Link>
+        </div>
       <div className={msg.message__container}>
         <div className={msg.message__container1}>
           {messages.map((item) => (
@@ -235,6 +252,8 @@ function UserMsg() {
           </form>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }
