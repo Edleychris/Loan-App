@@ -190,7 +190,10 @@ ul .filter_items:hover {
   cursor: pointer;
   color: black;
 }
-
+.cancel2:hover{
+  background-color: #d9d9d9;
+  border-radius: 5px;
+}
 .select_format {
   border: 5px solid white;
   position: absolute;
@@ -202,8 +205,12 @@ ul .filter_items:hover {
   padding: 0px 0px 10px 4px;
   height: max-content;
   box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
-
+.options:hover{
+  background-color: #d9d9d9;
+  border-radius: 15px;
+}
 .format_text {
   /* border: 1px solid black; */
   border: 0.5px solid #6A8FE5;
@@ -302,6 +309,7 @@ table tbody {
   justify-content: space-between;
   color: black;
   height: 3rem;
+  border-radius: 5px;
 }
 
 .clientsdata h3 {
@@ -397,4 +405,8 @@ table tbody {
   align-items: center;
   padding: 0.6rem;
   border-radius: 20px;
+}
+.checkboxIcon_1_client{
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

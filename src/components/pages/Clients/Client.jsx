@@ -9,6 +9,7 @@ import ReactToPrint from "react-to-print";
 import { useReactToPrint } from "react-to-print";
 import { BiChevronRight } from "react-icons/bi";
 import { CiFilter, CiSearch } from "react-icons/ci";
+import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
 import Navbar from "../../Header/Navbar";
 import Side from "../../SideMenu/Side";
 import "../../../App.css";
@@ -29,7 +30,21 @@ const Client = () => {
   const loanStatus = "Loan Status";
   const date = "Date";
   const documentTitle = `${applicationNumber} ${fullName} ${loanStatus} ${date}`;
+  const [clientDataChecked, setClientDataChecked] = useState(false);
+  const [checkboxesChecked, setCheckboxesChecked] = useState(Array(ClientInfo.length).fill(false));
 
+  const handleClientDataCheck = () => {
+    const newClientDataChecked = !clientDataChecked;
+    setClientDataChecked(newClientDataChecked);
+    setCheckboxesChecked(Array(ClientInfo.length).fill(newClientDataChecked));
+  };
+
+
+  const handleCheckboxChange = (index) => {
+    const newCheckboxesChecked = [...checkboxesChecked];
+    newCheckboxesChecked[index] = !newCheckboxesChecked[index];
+    setCheckboxesChecked(newCheckboxesChecked);
+  };
   const componentRef = useRef();
   const conponentPDF = useRef();
 
@@ -81,17 +96,17 @@ const Client = () => {
   };
 
   //for checkbox change
-  const handleCheckboxChange = (e, clientId) => {
-    const updatedData = filteredClients.map((client) => {
-      if (client.id === clientId) {
-        console.log(client);
-        return { ...client, checked: e.target.checked };
-      }
-      console.log(client.id);
-      return client;
-    });
-    setFilteredData(updatedData);
-  };
+  // const handleCheckboxChange = (e, clientId) => {
+  //   const updatedData = filteredClients.map((client) => {
+  //     if (client.id === clientId) {
+  //       console.log(client);
+  //       return { ...client, checked: e.target.checked };
+  //     }
+  //     console.log(client.id);
+  //     return client;
+  //   });
+  //   setFilteredData(updatedData);
+  // };
 
   const handleAllCheckChange = (e) => {
     const updatedData = filteredClients.map((client) => ({
@@ -152,7 +167,7 @@ const Client = () => {
                         className={css.filter}
                         onClick={handleFilterToggle}
                       >
-                        Filter
+                        {filterStatus === "All" ? "Filter" : filterStatus} 
                         <CiFilter className={css.funnel} />
                       </button>
                     </div>
@@ -181,7 +196,7 @@ const Client = () => {
                           </li>
                           <li
                             className={css.options}
-                            onClick={() => handleFilterClick("Pending Review")}
+                            onClick={() => handleFilterClick("Pending")}
                           >
                             Pending
                           </li>
@@ -190,6 +205,17 @@ const Client = () => {
                             onClick={() => handleFilterClick("Declined")}
                           >
                             Declined
+                          </li>
+                          <li
+                            className={css.options}
+                            onClick={() => handleFilterClick("Closed")}
+                          >
+                            Closed
+                          </li><li
+                            className={css.options}
+                            onClick={() => handleFilterClick("Due")}
+                          >
+                            Due
                           </li>
                         </ul>
                       </div>
@@ -204,13 +230,10 @@ const Client = () => {
                         <button
                           type="button"
                           className={css.print}
-                          // onClick={handlePrintToggle}
                         >
                           Print
                         </button>
                       )}
-                      // content={() => componentRef.current}
-                      // documentTitle= " Client Data"
                       content={() => componentRef.current}
                       documentTitle={documentTitle}
                       pageStyle="@page { size: auto; margin: 10mm; }"
@@ -255,16 +278,13 @@ const Client = () => {
                   </div>
                 </div>
               </div>
-
               <div className={css.clientsblock} ref={conponentPDF}>
                 <div className={css.clientsdata} ref={componentRef}>
-                  <input
-                    type="checkbox"
-                    name="checkall"
-                    id="check"
-                    onChange={handleAllCheckChange}
-                    className={css.check}
-                  />
+                {clientDataChecked ? (
+          <ImCheckboxChecked className={css.checkboxIcon_1_client} onClick={handleClientDataCheck} />
+        ) : (
+          <ImCheckboxUnchecked className={css.checkboxIcon_1_client} onClick={handleClientDataCheck} />
+        )}
                   <h3>Application Number</h3>
                   <h3>Full Name</h3>
                   <h3>Loan Status</h3>
@@ -276,7 +296,7 @@ const Client = () => {
                     className={css.ClientInfo_Block_Container}
                     ref={componentRef}
                   >
-                    {filteredClients.map((client) => {
+                    {filteredClients.map((client, index) => {
                       if (
                         searchQuery &&
                         !(
@@ -308,14 +328,19 @@ const Client = () => {
                       return (
                         <div key={client.id} className={css.clientinfo__client}>
                           {/* <div> */}
-                          <input
-                            type="checkbox"
-                            name="check"
-                            id="check"
-                            className={css.check}
-                            checked={client.checked}
-                            onChange={(e) => handleCheckboxChange(e, client.id)}
-                          />
+                          {checkboxesChecked[index] ? (
+                  <ImCheckboxChecked
+                  className={css.checkboxIcon_1_client}
+                  onClick={() => handleCheckboxChange(index)}
+                />
+              ) : (
+                <ImCheckboxUnchecked
+                  type="checkbox"
+                  className={css.checkboxIcon_1_client}
+                  checked={false}
+                  onClick={() => handleCheckboxChange(index)}
+                />
+              )}
                           <Link to="/clientprofile/overview">
                             <div className={css.clientinfo2}>
                               {client.applicationNumber}

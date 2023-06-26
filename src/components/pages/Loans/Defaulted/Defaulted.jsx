@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from '../AllLoans/Clients.module.css';
 import css from '../AllLoans/Clients.module.css';
 import { BiCheckbox } from 'react-icons/bi';
+import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
 import defaultdata from './data';
 
 export const Defaulted = ({ selectAll, onAllCheckChange, searchQuery, setSearchQuery, filterStatus }) => {
@@ -10,9 +11,11 @@ export const Defaulted = ({ selectAll, onAllCheckChange, searchQuery, setSearchQ
   const [checkboxesChecked, setCheckboxesChecked] = useState(Array(defaultdata.length).fill(false));
 
   const handleClientDataCheck = () => {
-    setClientDataChecked(!clientDataChecked);
-    setCheckboxesChecked(Array(defaultdata.length).fill(!clientDataChecked));
+    const newClientDataChecked = !clientDataChecked;
+    setClientDataChecked(newClientDataChecked);
+    setCheckboxesChecked(Array(defaultdata.length).fill(newClientDataChecked));
   };
+
 
   const handleCheckboxChange = (index) => {
     const newCheckboxesChecked = [...checkboxesChecked];
@@ -28,11 +31,11 @@ export const Defaulted = ({ selectAll, onAllCheckChange, searchQuery, setSearchQ
         <div>
           <div className={css.clientsdata___block}>hello</div>
           <div className={css.clientsdata011}>
-            {selectAll ? (
-              <BiCheckbox className={css.checkboxIcon_1} onClick={handleClientDataCheck} />
-            ) : (
-              <input type="checkbox" checked={false} onChange={handleClientDataCheck} className={styles.checkbox_12} />
-            )}
+          {clientDataChecked ? (
+          <ImCheckboxChecked className={css.checkboxIcon_1_app} onClick={handleClientDataCheck} />
+        ) : (
+          <ImCheckboxUnchecked className={styles.checkbox_12_app} onClick={handleClientDataCheck} />
+        )}
             <h3>Case Number</h3>
             <h3>First Name</h3>
             <h3>Last Name</h3>
@@ -44,7 +47,7 @@ export const Defaulted = ({ selectAll, onAllCheckChange, searchQuery, setSearchQ
       </div>
       <div className={styles.clientContainer_block_block_block}>
         <div className={styles.clientContainer}>
-          {filteredData.map((item) => {
+          {filteredData.map((item, index) => {
             if (
               searchQuery &&
               !(
@@ -86,19 +89,19 @@ export const Defaulted = ({ selectAll, onAllCheckChange, searchQuery, setSearchQ
 
             return (
               <div key={item.id} className={`${styles.clientinfo__All}`}>
-                {itemChecked ? (
-                  <BiCheckbox
-                    className={styles.checkboxIcon}
-                    onClick={() => handleCheckboxChange(itemId)}
-                  />
-                ) : (
-                  <input
-                    type="checkbox"
-                    className={styles.checkbox}
-                    checked={false}
-                    onChange={() => handleCheckboxChange(itemId)}
-                  />
-                )}
+                {checkboxesChecked[index] ? (
+                  <ImCheckboxChecked
+                  className={styles.checkboxIcon1_app}
+                  onClick={() => handleCheckboxChange(index)}
+                />
+              ) : (
+                <ImCheckboxUnchecked
+                  type="checkbox"
+                  className={styles.checkbox1_app}
+                  checked={false}
+                  onClick={() => handleCheckboxChange(index)}
+                />
+              )}
                 <div>{item.caseNumber}</div>
                 <div>{item.firstName}</div>
                 <div>{item.LastName}</div>

@@ -1,11 +1,9 @@
 import css from './Clients.module.css';
 import PropTypes from 'prop-types';
-// import CheckBoxIcon from '@mui/icons-material/CheckBox';
-import { BiCheckbox } from 'react-icons/bi';
+import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
 import styles from './Clients.module.css';
 import data from './Data';
 import { useState } from 'react';
-
 
 
 export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
@@ -13,11 +11,12 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
   const [checkboxesChecked, setCheckboxesChecked] = useState(Array(data.length).fill(false));
   
 
-
   const handleClientDataCheck = () => {
-    setClientDataChecked(!clientDataChecked);
-    setCheckboxesChecked(Array(data.length).fill(!clientDataChecked));
+    const newClientDataChecked = !clientDataChecked;
+    setClientDataChecked(newClientDataChecked);
+    setCheckboxesChecked(Array(data.length).fill(newClientDataChecked));
   };
+
 
   const handleCheckboxChange = (index) => {
     const newCheckboxesChecked = [...checkboxesChecked];
@@ -34,9 +33,9 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
         <div  className={css.clientsdata___block}>hello</div>
         <div className={css.clientsdata}>
         {clientDataChecked ? (
-          <BiCheckbox className={css.checkboxIcon_1} onClick={handleClientDataCheck} />
+          <ImCheckboxChecked className={css.checkboxIcon_1} onClick={handleClientDataCheck} />
         ) : (
-          <input type="checkbox" className={styles.checkbox_12} onClick={handleClientDataCheck} />
+          <ImCheckboxUnchecked className={styles.checkbox_12} onClick={handleClientDataCheck} />
         )}
         <h3>Case Number</h3>
         <h3>First Name</h3>
@@ -86,16 +85,16 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
           return (
             <div key={itemId} className={`${styles.clientinfo}`}>
               {checkboxesChecked[index] ? (
-                <CheckBoxIcon
-                  className={styles.checkboxIcon}
+                <ImCheckboxChecked
+                  className={styles.checkboxIcon1}
                   onClick={() => handleCheckboxChange(index)}
                 />
               ) : (
-                <input
+                <ImCheckboxUnchecked
                   type="checkbox"
-                  className={styles.checkbox}
+                  className={styles.checkbox1}
                   checked={false}
-                  onChange={() => handleCheckboxChange(index)}
+                  onClick={() => handleCheckboxChange(index)}
                 />
               )}
               <div>{item.caseNumber}</div>

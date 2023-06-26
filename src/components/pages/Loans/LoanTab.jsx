@@ -33,8 +33,13 @@ const LoanTab = () => {
   const [isOpenFilter, setIsOpenFilter] = useState(false);
   const [filterStatus, setFilterStatus] = useState('All');
   const [selectedOption, setSelectedOption] = useState("");
+  const applicationNumber = "Application Number";
+  const fullName = "Full Name";
+  const loanStatus = "Loan Status";
+  const date = "Date";
 
-
+  const documentTitle = `${applicationNumber} ${fullName} ${loanStatus} ${date}`;
+  
   const componentRef = useRef();
   const conponentPDF = useRef();
 
@@ -145,7 +150,7 @@ const LoanTab = () => {
                     {/* filter button */}
 
                     <div className={style.filter_dropdown}>
-                    <button type='button' className={style.filter} onClick={handleFilterToggle}>Filter 
+                    <button type='button' className={style.filter} onClick={handleFilterToggle}>{filterStatus === "All" ? "Filter" : filterStatus} 
                     <CiFilter className={style.funnel}/>
 
                     </button>
@@ -173,8 +178,18 @@ const LoanTab = () => {
 
                 <div className={style.component2}>
                  <div className={style.print_btn}>
-                 <button type='button' className={style.print} >Print</button>
-
+                 <ReactToPrint
+                      trigger={() => (
+                        <button
+                        type='button' className={style.print}
+                        >
+                          Print
+                        </button>
+                      )}
+                      content={() => componentRef.current}
+                      documentTitle={documentTitle}
+                      pageStyle="@page { size: auto; margin: 10mm; }"
+                    />
                 </div>
                   <div className={style.export_btn}>
                   <button type='button' className={style.export} onClick={handleExportToggle}>Export Data</button>

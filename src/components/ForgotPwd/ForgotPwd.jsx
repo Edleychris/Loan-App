@@ -154,7 +154,7 @@ const ForgotPwd = () => {
           setResendTimer(
             setTimeout(() => {
               setShowResendLink(false);
-            }, 3000)
+            }, 2000)
           );
         }}
       >

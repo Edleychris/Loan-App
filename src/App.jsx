@@ -62,18 +62,8 @@ function App() {
     <Router>
       <ToastContainer />
 
-
     {loggedIn ? (
         <Route path="/dashboard" element={<Dashboard />} />
-          
-    //   <div className="App">
-    //   <Navbar/>
-    //   <div className="sideandpage">
-    //     <Side  />
-    //     <PageContent />
-    //   </div>
-    // </div>
-
     ) : (
       <Routes>
         <Route path='/' element={<Landing />} />

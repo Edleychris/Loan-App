@@ -7,13 +7,13 @@
     border-radius: 10px;
     align-items: center;
     position: absolute;
-    border: 1px solid #04297F;
+    border: 1.5px solid #0744d3;
     background: #FFFFFE;
     top: -2rem;
     right: -2rem;
     width: 550px;
     height: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 0 10px rgba(7, 7, 44, 0.2); */
     transition: background-color 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 

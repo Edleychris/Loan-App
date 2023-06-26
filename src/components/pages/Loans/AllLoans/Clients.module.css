@@ -30,9 +30,9 @@ margin-top: -1rem;
       align-items: center;
       color: black;
     margin-left:.4rem;
-  background-color: white;
+  /* background-color: white; */
   border-radius: 5px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: fixed;
   height: 3rem;
   }
@@ -41,7 +41,7 @@ margin-top: -1rem;
     font-weight: 700;
     color: black;
     width: 156px;
-    margin-right: .6rem;
+    margin-right: 1rem;
 }
   .Loan__Status{
     color: white;
@@ -63,37 +63,56 @@ margin-top: -1rem;
       font-size: 14px;
       font-weight: 700;
       color: black;
-      width: 156px;
-      margin-right: .6rem;
+      width: 166px;
+      /* background-color: blue; */
+      /* margin-right: 2.6rem; */
   }
   .checkboxIcon_1{
-    padding: 0px 4px;
-    margin: 0px 9px;
+    margin: 0px 14px;
   color: black;
-  margin-left: .4rem;
+  margin-left: .2rem;
+  width: 49px;
   }
   .checkbox_12{
-    margin: 0px 21px;
-  margin-left: .8rem;
-  color: black;
-  background-color: black;
-  width: 19px;
+    margin: 0px 14px;
+  margin-left: .2rem;
+  width: 49px;
   }
-  .checkbox{
-      padding: 0px 4px;
-      margin: 0px 9px;
-    color: black;
-    margin-left: .4rem;
-  }
-  .checkbox2{
-    padding: 0px 4px;
-      margin: 0px 11px;
-    margin-left: .8rem;
-    color: black;
-    background-color: black;
-    width: 19px;
-  }
+  .checkboxIcon1{
+      margin: 0px 21px;
+    width: 49px;
+  margin-left: -.8rem;
 
+  }
+  .checkbox1{
+      margin: 0px 21px;
+    margin-left: -.8rem;
+    color: black;
+  width: 49px;
+  }
+.checkboxIcon_1_app{
+  margin: 0px 0px;
+color: #000000;
+/* margin-left: .rem; */
+width: 39px;
+}
+.checkbox_12_app{
+  margin: 0px 0px;
+
+width: 39px;
+}
+.checkboxIcon1_app{
+  width: 49px;
+    margin: 0px -30px;
+    margin-left: -1.2rem;
+
+}
+.checkbox1_app{
+    margin: 0px -30px;
+  margin-left: -1.2rem;
+  color: black;
+width: 49px;
+}
 
 
 
@@ -122,13 +141,20 @@ margin-top: -1rem;
     margin-bottom: 15px;
 }
 .clientinfo__All div{
-  width: 1200vw;
-    width: 13%;
+  /* width: 1200vw; */
+    width: 140px;
+    /* width: 13%; */
     font-size: 14px;
+    display: flex;
+    align-items: center;
     color: #010e2a;
     font-weight: 500;
 }
-
+.clientinfo__All div:nth-child(2){
+  /* background-color: red; */
+  /* margin-left: -10px; */
+  padding-right: 150px;
+}
 .clientinfo:hover{
   background-color: #8fa4d3;
 }
@@ -164,18 +190,6 @@ margin-top: -1rem;
     width: 30px;
     margin-right: -10px;
 }
-.checkbox{
-    color: black;
-    /* background-color: black; */
-    width: 19px;
-    margin-left: -.4rem;
-}
-.checkboxIcon{
-    color: black;
-    margin-left: -.5rem;
-
-}
-.checkbox11{
-  width: 19px;
-  margin-left: .7rem;
+.clientinfo div:nth-child(2){
+  margin-left: -1.4rem;
 }

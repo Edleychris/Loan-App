@@ -1,182 +1,301 @@
-import React, { useEffect, useState } from 'react'
-import style from './signup.module.css'
-import pic from '../images/business guy.png'
-import { useRef } from 'react';
+import React, { useState } from 'react';
+import style from './signup.module.css';
+import pic from '../images/business guy.png';
 import { Link, useNavigate } from 'react-router-dom';
-import FormInput from './FormInput/FormInput';
 import logo from '../../assets/Group 7753.svg';
 import axios from 'axios';
+import { BsEye, BsEyeSlash } from "react-icons/bs";
+
+
+const INITIAL = { firstName: '', lastName: '', role: '', phoneNumber: '', email: '', password: '' };
 
 const Signup = () => {
-const [values, setValues] = useState(
-  {
-  firstName: "",
-  lastName: "",
-  role: "",
-  phoneNumber: "",
-  email: "",
-  password: "",
+  const [form, setForm] = useState(INITIAL);
+  const [errorUI, setErrorUI] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [PasswordVisible, setPasswordVisible] = useState(false);
+  const navigate = useNavigate();
+  // const [values, setValues] = useState({
+  //   firstName: '',
+  //   lastName: '',
+  //   role: '',
+  //   phoneNumber: '',
+  //   email: '',
+  //   password: '',
+  // });
+  // const [error, setError] = useState('');
+  // const [loading, setLoading] = useState(false);
+  // const navigate = useNavigate();
 
-}
-)
-const [error, setError] = useState('');
-const [loading, setLoading] = useState(false);
-const emailRef = useRef();
-const navigate = useNavigate()
-
-const inputs = [
-  {id: 1,
-  name: 'firstName',
-  type: 'text',
-  placeholder: 'John',
-  label: 'First Name',
-  pattern: `^[^0-9]*[a-zA-Z][^0-9]*[a-zA-Z][^0-9]*[a-zA-Z][^0-9]*$` ,
-  errorMessage: "At least 2 alphabets, no numbers",
-  minlength: "2",
-  required: true,
-
-},
-{id: 2,
-  name: 'lastName',
-  type: 'text',
-  placeholder: 'Doe',
-  label: 'Last Name',
-  pattern: `^[^0-9]*[a-zA-Z][^0-9]*[a-zA-Z][^0-9]*[a-zA-Z][^0-9]*$` ,
-  errorMessage: "At least 2 alphabets, no numbers",
-  minlength: "2",
-  required: true,
-
-},
-{id: 3,
-  name: 'role',
-  type: 'text',
-  placeholder: 'Junior Loan Officer',
-  label: 'Role',
-  pattern: `^[^0-9]*[a-zA-Z][^0-9]*[a-zA-Z][^0-9]*[a-zA-Z][^0-9]*$`,
-  errorMessage: "At least 2 alphabets, no numbers",
-  minlength: "2",
-  required: true,
-
-},
-{id: 4,
-  name: 'phoneNumber',
-  type: 'text',
-  placeholder: '08122222222',
-  label: 'Phone Number',
-  pattern: `^[0-9]{11}$`,
-  errorMessage: "Input should be 11 digits and not contain alphabets or symbols", 
-  minlength: '11',
-  maxlength:'11', 
-  required: true,
-
-},
-{id: 5,
-  name: 'email',
-  type: 'email',
-  placeholder: 'johndoe@gmail.com',
-  label: 'Email',
-  errorMessage: "Invalid email address",
-  required: true,
-
-},
-{id: 6,
-  name: 'password',
-  type: 'password',
-  placeholder: 'JohnDoe',
-  label: 'Password',
-  pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$`,
-  errorMessage: "At least 8 characters including at least 1 uppercase, 1 number, 1 symbol. ",
-  required: true,
-}
-]
-
-
-
-
-const createAccount = (e) => {
+  const createAccount = (e) => {
     e.preventDefault();
 
     axios({
       method: 'POST',
-      url: "https://loanifyteama-production.up.railway.app/api/v1/auth/sign-up",
+      url: 'https://loanifyteama-production.up.railway.app/api/v1/auth/sign-up',
       headers: {
         'Content-Type': 'application/json',
         // Add any other headers as needed
       },
       data: {
-
-        firstName: values.firstName,  // Include the "firstName" field with a value
-        lastName: values.lastName,
-        email: values.email,
-        phoneNumber: values.phoneNumber,
-        role: values.role,
-        password: values.password,
+        firstName: form.firstName,
+        lastName: form.lastName,
+        email: form.email,
+        phoneNumber: form.phoneNumber,
+        role: form.role,
+        password: form.password,
         // Add any other data fields as needed
-      }
+      },
     })
-      .then(response => {
-        // Handle the response data
+      .then((response) => {
         console.log(response.data);
-        navigate('/confirmation')
+        navigate('/confirmation');
       })
-      .catch(error => {
-        // Handle any errors
-        if (error.message == 'Request failed with status code 500'){
-          setError("User already exists")
+      .catch((errorUI) => {
+        if (errorUI.message === 'Request failed with status code 500') {
+          setErrorUI('User already exists');
         }
-        console.error(error);
+        console.error(errorUI);
       });
-      
-     
-   
-}
+  };
 
-const onChange = (e)=>{
-  setValues({...values, [e.target.name]: e.target.value})
-}
+  const togglePasswordVisibility = () => {
+    setPasswordVisible((prevVisible) => !prevVisible);
+  };
 
+  
+
+  const VALIDATION = {
+    email: [
+      {
+        isValid: (value) => !!value,
+        message: 'Is required.',
+      },
+      {
+        isValid: (value) => /\S+@\S+\.\S+/.test(value),
+        message: 'Not an email.',
+      },
+  ],
+
+  password: [
+    {
+      isValid: (value) => !!value,
+      message: "Is required.",
+    },
+    {
+      isValid: (value) =>
+        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/.test(value),
+      message:
+        "Requires 6+ characters, Uppercase, Lowercase letters, numeric digit (0-9) and a special character.",
+    },
+  ],
+  
+  };
+
+  const getErrorFields = (form) =>
+    Object.keys(form).reduce((acc, key) => {
+      if (!VALIDATION[key]) return acc;
+
+      const errorsPerField = VALIDATION[key]
+
+        .map((validation) => ({
+          isValid: validation.isValid(form[key]),
+          message: validation.message,
+        }))
+
+        .filter((errorPerField) => !errorPerField.isValid);
+
+      return { ...acc, [key]: errorsPerField };
+    }, {});
+
+    const handleChange = (e) => {
+      const { id, value } = e.target;
+      if (errorUI) setErrorUI(null);
+      setForm((prevState) => ({
+        ...prevState,
+        [id]: value,
+      }));
+      console.log({ id, value });
+    };
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      const errorFields = getErrorFields(form);
+      const hasErrors = Object.values(errorFields).flat().length > 0;
+      if (hasErrors) return setErrorUI({ ...errorFields });
+
+      setForm(INITIAL);
+      console.log("Form submitted");
+      }
+
+  // const onChange = (e) => {
+  //   setValues({ ...values, [e.target.name]: e.target.value });
+  // };
 
   return (
-  <div className={style.signup_container}>
-    <div className={style.signup_body}>
-      
-        <div><img src={pic} alt="picture" className={style.sideimg}/></div>
+    <div className={style.signup_container}>
+      <div className={style.signup_body}>
+       
+        <img src={pic} alt="picture" className={style.sideimg} />
+       
 
         <section className={style.section}>
+          <img src={logo} alt="logo" className={style.logo} />
+          <div className={style.formContainer}>
+            
+              <h1 className={style.signupheading}>Sign Up</h1>
+           
 
- <img src={logo} alt="logo" className={style.logo}/>
- <div className={style.formContainer}>
- <div>
-    <h1 className={style.signupheading}>Sign Up</h1>
-  </div>
+            <div className={style.signup_details}>
+              <form onSubmit={handleSubmit} className={style.singup_form}>
 
-    <div className={style.signup_details}>
-        <form onSubmit={createAccount} className={style.singup_form}> 
-        {inputs.map((input)=>(
-          <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} pattern={input.pattern} errorMessage={input.errorMessage} placeholder={input.placeholder}  className={style[`input-${input.name}`]} />
-        ))}
+                <div className={style.inputFieldBlock}>
+                  <label className={style.label} htmlFor="firstName">
+                    First Name
+                  </label>
+                  <input
+                type="text" 
+                id="firstName"
+                value={form.firstName}
+                onChange={handleChange}
+                placeholder="John"
+                className={style.signup__input}
+                required
+              />
+                </div>
+                
+             
 
-          <button type='submit' className={style.submit} disabled={loading}>
-            Sign up
-           </button>
+                <div className={style.inputFieldBlock}>
+                  <label className={style.label} htmlFor="lastName">
+                    Last Name
+                  </label>
+                  <input
+                type="text" 
+                id="lastName"
+                value={form.lastName}
+                onChange={handleChange}
+                placeholder="Doe"
+                className={style.signup__input}
+                required
+              />
+                </div>
 
-           <div className={style.login_signup}>
-                        <p className={style.logintext}>Already have an account? </p>
-                        <Link to='/login' className={style.loginlink}>Log in</Link>
-            </div>
+                <div className={style.inputFieldBlock}>
+                  <label className={style.label} htmlFor="role">
+                    Role
+                  </label>
+                  <input
+                type="text" 
+                id="role"
+                value={form.role}
+                onChange={handleChange}
+                placeholder="John"
+                className={style.signup__input}
+                required
+              />
+                </div>
+
+                <div className={style.inputFieldBlock}>
+                  <label className={style.label} htmlFor="phoneNumber">
+                    Phone Number
+                  </label>
+                  <input
+                type="number" 
+                id="phoneNumber"
+                value={form.phoneNumber}
+                onChange={handleChange}
+                placeholder="08122222222"
+                minLength={11}
+                maxLength={11}
+                className={style.signup__input}
+                required
+              />
+                </div>
+
+                <div>
+                  <div className={style.inputFieldBlock}>
+                  <label className={style.label} htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                type="text" 
+                id="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="johndoe@gmail.com"
+                className={style.signup__input}
+              />
+              </div>
+              <p className={style.error}>
+                            {errorUI?.email?.length ? (
+                                <span style={{ color: 'red' }}>
+                                    {errorUI.email[0].message}
+                                </span>
+                            ) : null}
+              </p>
+              </div>
+
+                <div>
+                <div className={style.inputFieldBlock}>
+                  <label className={style.label} htmlFor="password">
+                    Password
+                  </label>
 
                   
+                  <input
+                type={PasswordVisible ? 'text' : 'password'} 
+                id="password"
+                value={form.password}
+                onChange={handleChange}
+                placeholder="Password"
+                className={style.signup__input}
+              />
+              {PasswordVisible ? (
+                <BsEye
+                  onClick={togglePasswordVisibility}
+                  className={style.signupPasswordBlock__icon}
+                />
+              ) : (
+                <BsEyeSlash
+                  onClick={togglePasswordVisibility}
+                  className={style.signupPasswordBlock__icon}
+                />
+              )}
+             
+                </div>
+                <p className={style.error}>
+              {errorUI?.password?.length ? (
+                <span style={{ color: "red" }}>
+                  {errorUI.password[0].message}
+                </span>
+              ) : null}
+            </p>
+            </div>
 
-        </form>
+                <button type="submit" className={style.submit} disabled={loading}>
+                  Sign up
+                </button>
+                
+                {/* <div className={style.login_signup}>
+                  <p className={style.logintext}>Already have an account?</p>
+                  <Link to="/login" className={style.loginlink}>
+                    Log in
+                  </Link>
+                </div> */}
+              </form>
+              <div className={style.login_signup}>
+                  <p className={style.logintext}>Already have an account?</p>
+                  <Link to="/login" className={style.loginlink}>
+                    Log in
+                  </Link>
+                </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
- </div>
+  );
+};
 
- 
- </section>
-    </div>
-    
-    </div>
-  )
-}
-
-export default Signup
+export default Signup;
