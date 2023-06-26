@@ -30,7 +30,7 @@ const Notifications = () => {
                   <span className={notify.number}>8</span>
                 </div>
                 <div className={notify.notify__setting__icon}>
-                  <Link to="/settings">
+                  <Link to="/settings/notification">
                     <IoSettingsOutline />
                   </Link>
                 </div>

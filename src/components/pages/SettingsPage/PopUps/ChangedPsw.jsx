@@ -103,9 +103,9 @@ const ChangedPsw = ({ onSuccess }) => {
   };
   // className={style.editPopUp_change_psw}
   return (
-    <div>
-      <div>
-        <div >
+    // <div>
+    //   <div>
+    //     <div >
           <div className={style.editPopUp_form}>
           <div className={style.editPopUp_header_text}>
           <h4>Change Password</h4>
@@ -114,7 +114,6 @@ const ChangedPsw = ({ onSuccess }) => {
               onSubmit={handleSubmit}
               className={style.editPopUp_header}
             >
-            
               <div className={style.passwordWrapper}>
                 <div className={style.editPasswordBlock_diff}>
                   <input
@@ -200,15 +199,12 @@ const ChangedPsw = ({ onSuccess }) => {
               </button>
             </form>
           </div>
-        </div>
-      </div>
-    </div>
+    //     </div>
+    //   </div>
+    // </div>
   );
 };
 
-ChangedPsw.propTypes = {
-  onClose: PropTypes.func.isRequired,
-};
 ChangedPsw.propTypes = {
   onSuccess: PropTypes.func.isRequired,
 };

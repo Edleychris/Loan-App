@@ -4,8 +4,11 @@ import { Link, Outlet } from "react-router-dom";
 import profileData from "./ProfileData";
 import ParentSwitch from "../Switch/ParentSwitch";
 import { BiChevronRight, BiCamera } from "react-icons/bi";
-// import {FaUserCircle} from 'react-icons/fa'
-import empty from '../../../../assets/Default_pfp.svg.png'
+import empty from '../../../../assets/Default_pfp.svg.png';
+import Navbar from "../../../Header/Navbar";
+import Side from "../../../SideMenu/Side";
+import "../../../../App.css";
+
 
 export const ProfileSettings = () => {
   const [firstName, setFirstName] = useState("John");
@@ -17,12 +20,13 @@ export const ProfileSettings = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [photo, setPhoto] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
+  const [activeTab, setActiveTab] = useState("Profile");
 
- 
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
 
 
-
-  // Simulated user data after signing in
   const user = {
     // firstName: 'John',
     // lastName: 'Doe',
@@ -86,15 +90,61 @@ export const ProfileSettings = () => {
 
 
   return (
+    <div className="App">
+    <Navbar />
+    <div className="sideandpage">
+      <Side />
+  <div className="PageContent">
     <div>
-      <div className={style.profilesettingsNav}>
+  <div className={style.profilesettingsNav}>
         <Link to="/dashboard">Home</Link>
         <BiChevronRight className={style.icon} />
         <Link to="/settings">Settings</Link>
         <BiChevronRight className={style.icon} />
         <Link to="#">Profile</Link>
       </div>
-
+    <div className={style.settings_tab_container}>
+    <div className={style.settings_tab_header}>
+      <div className={style.settings_tab_tabs}>
+      <div className={`${style.settings_tab_tab} ${activeTab === "General" ? style.active : ""}`} 
+        onClick={() => handleTabClick("General")}>
+        <Link to='/settings'>
+        General
+        </Link>
+        
+        </div>
+        <div className={`${style.settings_tab_tab} ${activeTab === "Profile" ? style.active : ""}`} 
+        onClick={() => handleTabClick("Profile")}>
+        <Link to='/settings/profile'>
+        Profile
+        </Link>
+        
+        </div>
+        <div className={`${style.settings_tab_tab} ${activeTab === "User Permissions" ? style.active : ""}`} 
+        onClick={() => handleTabClick("User Permissions")}>
+        <Link to='/settings/userPermission'>
+        User Permissions
+        </Link>
+        
+        </div>
+        <div className={`${style.settings_tab_tab} ${activeTab === "Notifications" ? style.active : ""}`} 
+        onClick={() => handleTabClick("Notifications")}>
+        <Link to='/settings/notification'>
+        Notifications
+        </Link>
+        
+        </div>
+        <div className={`${style.settings_tab_tab} ${activeTab === "Security" ? style.active : ""}`} 
+          onClick={() => handleTabClick("Security")}>
+          <Link to='/settings/security'>
+          Security
+          </Link>
+          </div>
+      </div>
+    </div>
+  </div>
+    <div>
+      
       
         <div className={style.userProfile_settings_container}>
           <div className={style.user_block}>
@@ -224,6 +274,9 @@ export const ProfileSettings = () => {
         <button className={style.save_profile_btn} onClick={handleSave}>Save</button>
       </div>
     </div>
+    </div>
+    </div>
+    </div></div>
   );
 };
 

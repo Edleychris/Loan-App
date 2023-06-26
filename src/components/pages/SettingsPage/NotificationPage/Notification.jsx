@@ -2,9 +2,23 @@ import style from "./notifications.module.css";
 import { Link } from "react-router-dom";
 import NotificationSwitch from "./NotificationSwitch";
 import { BiChevronRight } from "react-icons/bi";
+import Navbar from "../../../Header/Navbar";
+import Side from "../../../SideMenu/Side";
+import "../../../../App.css";
+import { useState } from "react";
 
 export const Notification = () => {
+  const [activeTab, setActiveTab] = useState("Notifications");
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
   return (
+    <div className="App">
+    <Navbar />
+    <div className="sideandpage">
+      <Side />
+  <div className="PageContent">
     <div>
       <div className={style.notificationOverviewnNav}>
         <Link to="/dashboard">Home</Link>
@@ -13,6 +27,42 @@ export const Notification = () => {
         <BiChevronRight className={style.icon} />
         <Link to="#">notification</Link>
       </div>
+      <div className={style.settings_tab_container}>
+      <div className={style.settings_tab_header}>
+        <div className={style.settings_tab_tabs}>
+        <div className={`${style.settings_tab_tab} ${activeTab === "General" ? style.active : ""}`} 
+          onClick={() => handleTabClick("General")}>
+          <Link to='/settings'>
+          General
+          </Link>
+          </div>
+          <div className={`${style.settings_tab_tab} ${activeTab === "Profile" ? style.active : ""}`} 
+          onClick={() => handleTabClick("Profile")}>
+          <Link to='/settings/profile'>
+          Profile
+          </Link>
+          </div>
+          <div className={`${style.settings_tab_tab} ${activeTab === "User Permissions" ? style.active : ""}`} 
+          onClick={() => handleTabClick("User Permissions")}>
+          <Link to='/settings/userpermission'>
+          User Permissions
+          </Link>
+          </div>
+          <div className={`${style.settings_tab_tab} ${activeTab === "Notifications" ? style.active : ""}`} 
+          onClick={() => handleTabClick("Notifications")}>
+          <Link to='/settings/notification'>
+          Notifications
+          </Link>
+          </div> 
+          <div className={`${style.settings_tab_tab} ${activeTab === "Security" ? style.active : ""}`} 
+          onClick={() => handleTabClick("Security")}>
+          <Link to='/settings/security'>
+          Security
+          </Link>
+          </div>
+        </div>
+      </div>
+    </div>
 
       <div className={style.notificationBlock}>
         <div className={style.emailNotificationBlock}>
@@ -118,6 +168,9 @@ export const Notification = () => {
             </div>
           </div>
         </div>
+      </div>
+      </div>
+      </div>
       </div>
     </div>
   );

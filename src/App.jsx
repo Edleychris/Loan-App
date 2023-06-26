@@ -16,7 +16,7 @@ import Notifications from "./components/pages/Notifications/Notifications";
 import Messages from "./components/pages/Messages/Messages";
 import Report from "./components/pages/Report/Report";
 import Client from "./components/pages/Clients/Client";
-import { Settings } from "./components/pages/SettingsPage/Settings";
+// import { Settings } from "./components/pages/SettingsPage/Settings";
 import Support from "./components/pages/Support/Support";
 import LoanTab from "./components/pages/Loans/LoanTab";
 import Profile from "./components/pages/Profile/Profile";
@@ -27,6 +27,7 @@ import { Security } from "./components/pages/SettingsPage/Security/Security";
 import ParentChangePsw from "./components/pages/SettingsPage/PopUps/ParentChangePsw";
 import Faq from "./components/pages/Support/Faq";
 import UserMsg from "./components/pages/Messages/UserMsg";
+import { General } from "./components/pages/SettingsPage/General/General";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -78,8 +79,8 @@ function App() {
         <Route path="/notifications" element={<Notifications />} />
         <Route path="/messages" element={<Messages />} />
         <Route path="/clients" element={<Client />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route exact path="/settings/profile" element={<ProfileSettings />} />
+        <Route path="/settings" element={<General />} />
+        <Route path="/settings/profile" element={<ProfileSettings />} />
         <Route
           exact
           path="/settings/userpermission"
@@ -87,6 +88,19 @@ function App() {
         />
         <Route exact path="/settings/notification" element={<Notification />} />
         <Route exact path="/settings/security" element={<Security />} />
+        {/* <Route exact path="/settings/profile" element={<ProfileSettings />} />
+        <Route
+          exact
+          path="/settings/userpermission"
+          element={<AllUserPermission />}
+        />
+        <Route exact path="/settings/notification" element={<Notification />} />
+        <Route exact path="/settings/security" element={<Security />} />
+        <Route
+          exact
+          path="/settings/security/change-password"
+          element={<ParentChangePsw />}
+        /> */}
         <Route
           exact
           path="/settings/security/change-password"

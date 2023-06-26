@@ -97,8 +97,6 @@ export const UsePermissionInfo = ({ selectedItems, onItemCheckChange }) => {
                 {isDropdownOpen && (
                   <div className={style.format_setting}>
                     <i className="bi bi-x" onClick={handleExportClose}></i>
-                    {/* <div className={style.text1__setting}> */}
-                      {/* <div className={style.text11__setting}> */}
                       <p> Uploader  </p>
                       <p> Approver  </p>
                       <p> Reviewer </p>
