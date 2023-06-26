@@ -1,22 +1,51 @@
 import data from '.././data/data.jsx';
 import style from './info.module.css';
-import { BiCheckbox } from 'react-icons/bi';
 import PropTypes from 'prop-types';
+import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
+import { useState } from 'react';
 
 
 export const Info = ({ selectedItems, onItemCheckChange }) => {
-  const handleCheckboxChange = (id) => {
-    onItemCheckChange(id);
+  const [clientDataChecked, setClientDataChecked] = useState(false);
+  const [checkboxesChecked, setCheckboxesChecked] = useState(Array(data.length).fill(false));
+
+
+  const handleClientDataCheck = () => {
+    const newClientDataChecked = !clientDataChecked;
+    setClientDataChecked(newClientDataChecked);
+    setCheckboxesChecked(Array(data.length).fill(newClientDataChecked));
   };
 
+  const handleCheckboxChange = (index) => {
+    const newCheckboxesChecked = [...checkboxesChecked];
+    newCheckboxesChecked[index] = !newCheckboxesChecked[index];
+    setCheckboxesChecked(newCheckboxesChecked);
+  };
   const isChecked = (id) => {
     return selectedItems.includes(id);
   };
 
   return (
+    <div>
+    <div className={style.clientsblock}>
+    <h2>All Clients</h2>
+    <div className={style.clientsdata}>
+    {clientDataChecked ? (
+        <ImCheckboxChecked className={style.checkbox1} onClick={handleClientDataCheck} />
+      ) : (
+        <ImCheckboxUnchecked type="checkbox" checked={false} onClick={handleClientDataCheck} className={style.checkbox2}/>
+      )}
+      <h3>Case Number</h3>
+      <h3>First Name</h3>
+      <h3>Last Name</h3>
+      <h3>Application Date</h3>
+      <h3>Recent Update</h3>
+      <h3>Loan Status</h3>
+    </div>
+  </div>
     <div className={style.infoContainer}>
       <div>
-        {data.map((item) => {
+        {data.map((item, index) => {
 
            const itemId = item.id;
            const itemChecked = isChecked(itemId);
@@ -42,18 +71,20 @@ export const Info = ({ selectedItems, onItemCheckChange }) => {
 
 
           return (
+            <div>
+      
             <div key={item.id} className={style.clientinfo}>
-              {itemChecked ? (
-                <BiCheckbox
+              {checkboxesChecked[index] ? (
+                <ImCheckboxChecked
                   className={style.checkboxIcon}
-                  onClick={() => handleCheckboxChange(itemId)}
+                  onClick={() => handleCheckboxChange(index)}
                 />
               ) : (
-                <input
-                  type="checkbox"
+                <ImCheckboxUnchecked
+                  // type="checkbox"
                   className={style.checkbox}
                   checked={false}
-                  onChange={() => handleCheckboxChange(itemId)}
+                  onClick={() => handleCheckboxChange(index)}
                 />
               )}
 
@@ -65,11 +96,12 @@ export const Info = ({ selectedItems, onItemCheckChange }) => {
               <div>{item.update}</div>
               <div style={statusStyle} className={style.LoanStatus}>{item.status}</div>
             </div>
+            </div>
                 )
 
           
         })}
-      </div>
+      </div></div>
     </div>
   );
 };

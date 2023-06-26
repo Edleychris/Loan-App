@@ -54,11 +54,11 @@ function Profile() {
       <div className={css.containerNotfix}>
         <Percentage />
       </div>
-
+{/* 
       <AllClients
         selectAll={selectAll}
         onAllCheckChange={handleAllCheckChange}
-      />
+      /> */}
 
       <div className={css.info}>
         <Info
