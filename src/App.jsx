@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import Landing from "./components/LandingPage/Landing";
 import Login from "./components/Login/Login";
@@ -31,7 +31,7 @@ import { General } from "./components/pages/SettingsPage/General/General";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
-  const [selectedItem, setSelectedItem] = useState('dashboard');
+  const [selectedItem, setSelectedItem] = useState('Dashboard');
 
   useEffect(()=>{
     localStorage.removeItem('token')
@@ -50,10 +50,9 @@ function App() {
         theme: 'colored',
       });
 
-  // Navigate to the dashboard
-      navigate('/dashboard');
     }
   };
+  
 
   const handleItemSelected = (item) => {
     setSelectedItem(item);
@@ -64,7 +63,42 @@ function App() {
       <ToastContainer />
 
     {loggedIn ? (
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard selectedItem={selectedItem}  onItemSelected={handleItemSelected}/>} />
+        <Route
+          exact
+          path="/settings/security/change-password"
+          element={<ParentChangePsw />}
+        />
+        <Route path="/reports" element={<Report />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/loans" element={<LoanTab />} />
+        <Route path="/profile" element={<Profile selectedItem={selectedItem}  onItemSelected={handleItemSelected}/>} />
+        <Route path="/support/faq" element={<Faq />} />
+        <Route path="/messages/user" element={<UserMsg />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/notifications" element={<Notifications />} />
+        <Route path="/messages" element={<Messages />} />
+        <Route path="/clients" element={<Client />} />
+        <Route path="/settings" element={<General />} />
+        <Route path="/settings/profile" element={<ProfileSettings />} />
+        <Route
+          exact
+          path="/settings/userpermission"
+          element={<AllUserPermission />}
+        />
+        <Route exact path="/settings/notification" element={<Notification />} />
+        <Route exact path="/settings/security" element={<Security />} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/confirmation' element={<Confirmation />} />
+        <Route path='/token' element={<Token handleLogin={handleLogin} />} />
+        <Route path='/forgotpwd' element={<ForgotPwd />} />
+        <Route path='/resetpassword' element={<ResetPassword/>} />
+        <Route path='/resetsuccesspage' element={<ResetSuccessPage/>} />
+
+        </Routes>
     ) : (
       <Routes>
         <Route path='/' element={<Landing />} />
@@ -88,6 +122,25 @@ function App() {
         />
         <Route exact path="/settings/notification" element={<Notification />} />
         <Route exact path="/settings/security" element={<Security />} />
+        <Route path="/reports" element={<Report />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/loans" element={<LoanTab />} />
+        <Route path="/profile" element={<Profile selectedItem={selectedItem}  onItemSelected={handleItemSelected}/>} />
+        <Route path="/support/faq" element={<Faq />} />
+        <Route path="/messages/user" element={<UserMsg />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/notifications" element={<Notifications />} /> */}
+        {/* <Route path="/messages" element={<Messages />} /> */}
+        {/* <Route path="/clients" element={<Client />} /> */}
+        {/* <Route path="/settings" element={<General />} /> */}
+        {/* <Route path="/settings/profile" element={<ProfileSettings />} /> */}
+        {/* <Route
+          exact
+          path="/settings/userpermission"
+          element={<AllUserPermission />}
+        /> */}
+        <Route exact path="/settings/notification" element={<Notification />} />
+        <Route exact path="/settings/security" element={<Security />} />
         {/* <Route exact path="/settings/profile" element={<ProfileSettings />} />
         <Route
           exact
@@ -101,17 +154,7 @@ function App() {
           path="/settings/security/change-password"
           element={<ParentChangePsw />}
         /> */}
-        <Route
-          exact
-          path="/settings/security/change-password"
-          element={<ParentChangePsw />}
-        />
-        <Route path="/reports" element={<Report />} />
-        <Route path="/support" element={<Support />} />
-        <Route path="/loans" element={<LoanTab />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/support/faq" element={<Faq />} />
-        <Route path="/messages/user" element={<UserMsg />} />
+       
       </Routes>
     )}
     </Router>

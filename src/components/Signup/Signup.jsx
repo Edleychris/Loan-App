@@ -5,6 +5,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/Group 7753.svg';
 import axios from 'axios';
 import { BsEye, BsEyeSlash } from "react-icons/bs";
+import { useDispatch } from 'react-redux';
+import { signup } from '../../features/userSlice';
 
 const INITIAL = {
   firstName: '',
@@ -19,42 +21,9 @@ const Signup = () => {
   const [form, setForm] = useState(INITIAL);
   const [errorUI, setErrorUI] = useState({});
   const [loading, setLoading] = useState(false);
-  // const [passwordVisible, setPasswordVisible] = useState(false);
   const navigate = useNavigate();
 
-  const createAccount = (e) => {
-    e.preventDefault();
-
-    axios({
-      method: 'POST',
-      url: 'https://loanifyteama-production.up.railway.app/api/v1/auth/sign-up',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      data: {
-        firstName: form.firstName,
-        lastName: form.lastName,
-        email: form.email,
-        phoneNumber: form.phoneNumber,
-        role: form.role,
-        password: form.password,
-      },
-    })
-      .then((response) => {
-        console.log(response.data);
-        navigate('/confirmation');
-      })
-      .catch((error) => {
-        if (error.message === 'Request failed with status code 500') {
-          setErrorUI('User already exists');
-        }
-        console.error(error);
-      });
-  };
-
-  // const togglePasswordVisibility = () => {
-  //   setPasswordVisible((prevVisible) => !prevVisible);
-  // };
+  const dispatch = useDispatch();
 
   const VALIDATION = {
     email: [
@@ -114,7 +83,33 @@ const Signup = () => {
 
     setForm(INITIAL);
     console.log("Form submitted");
-  }
+
+    dispatch(
+      signup({
+        name: form.firstName,
+        email: form.email,
+        password: form.password,
+        signedUp: true,
+      })
+    );
+
+    setLoading(true);
+    axios
+      .post('https://loanifyteama-production.up.railway.app/api/v1/auth/sign-up', form)
+      .then((response) => {
+        console.log(response.data);
+        navigate('/confirmation');
+      })
+      .catch((error) => {
+        if (error.message === 'Request failed with status code 500') {
+          setErrorUI('User already exists');
+        }
+        console.error(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
   return (
     <div className={style.signup_container}>
@@ -125,7 +120,10 @@ const Signup = () => {
           <div className={style.formContainer}>
             <h1 className={style.signupheading}>Sign Up</h1>
             <div className={style.signup_details}>
+
+
               <form onSubmit={handleSubmit} className={style.singup_form}>
+
                 <div className={style.inputFieldBlock}>
                   <label className={style.label} htmlFor="firstName">
                     First Name

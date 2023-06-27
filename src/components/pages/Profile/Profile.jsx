@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { User } from "./User/User";
-import { AllClients } from "./Allclients/AllClients";
+// import { AllClients } from "./Allclients/AllClients";
 import { Percentage } from "./Percentage/Percentage";
 import { Info } from "./Info/Info";
 import css from "./profilepage.module.css";
@@ -54,11 +54,6 @@ function Profile() {
       <div className={css.containerNotfix}>
         <Percentage />
       </div>
-{/* 
-      <AllClients
-        selectAll={selectAll}
-        onAllCheckChange={handleAllCheckChange}
-      /> */}
 
       <div className={css.info}>
         <Info

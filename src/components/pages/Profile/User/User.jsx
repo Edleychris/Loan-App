@@ -1,6 +1,8 @@
 import styles from "./user.module.css";
 import { useState } from "react";
 import empty from "../../../../assets/Default_pfp.svg.png";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../../features/userSlice";
 
 export const User = () => {
   const [firstName, setFirstName] = useState("John");
@@ -8,11 +10,13 @@ export const User = () => {
   const [role, setRole] = useState("Senior Loan Officer");
   const [photo, setPhoto] = useState("");
 
-  const user = {
+  const user = useSelector(selectUser);
+
+  // const user = {
     // firstName: 'John',
     // lastName: 'Doe',
-    photo: "url",
-  };
+    // photo: "url",
+  // };
 
   return (
     
@@ -38,7 +42,8 @@ export const User = () => {
           
             <div className={styles.about_user}>
               <h3>
-                {firstName} {lastName}
+                {user} 
+                {lastName}
               </h3>
               <p>
                 Role:

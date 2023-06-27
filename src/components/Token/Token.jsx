@@ -52,7 +52,7 @@ const Token = ({ handleLogin }) => {
     if (token.join('').length !== 4) {
       setErrToken('Invalid input');
       setLoading(true);
-      return;
+      // return;
     } 
 
     const joinedNumber = parseInt(token.join(''), 10);

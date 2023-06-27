@@ -6,6 +6,8 @@ import {Link, useNavigate} from 'react-router-dom';
 import logo from '../../assets/Group 7753.svg'
 import {BsEye, BsEyeSlash} from 'react-icons/bs'
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+// import { login } from '../../features/userSlice';
 
 
 const Login = () => {
@@ -19,6 +21,9 @@ const Login = () => {
     const [errMsg, setErrMsg] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
 
  
     useEffect(()=>{
@@ -64,6 +69,13 @@ const Login = () => {
               localStorage.setItem('token', response.data.token);
               if(response.data.status == true) {
                 navigate('/token')
+
+                dispatch(login({
+                  name: firstName,
+                  email: email,
+                  password: password,
+                  signedUp: true,
+                }))
               }
             })
             .catch(error => {
