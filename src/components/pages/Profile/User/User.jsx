@@ -10,7 +10,7 @@ export const User = () => {
   const [role, setRole] = useState("Senior Loan Officer");
   const [photo, setPhoto] = useState("");
 
-  const user = useSelector(selectUser);
+  // const user = useSelector(selectUser);
 
   // const user = {
     // firstName: 'John',
@@ -42,7 +42,7 @@ export const User = () => {
           
             <div className={styles.about_user}>
               <h3>
-                {user} 
+                {firstName} 
                 {lastName}
               </h3>
               <p>

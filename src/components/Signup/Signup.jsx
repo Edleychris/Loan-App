@@ -23,7 +23,7 @@ const Signup = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const VALIDATION = {
     email: [
@@ -84,14 +84,14 @@ const Signup = () => {
     setForm(INITIAL);
     console.log("Form submitted");
 
-    dispatch(
-      signup({
-        name: form.firstName,
-        email: form.email,
-        password: form.password,
-        signedUp: true,
-      })
-    );
+    // dispatch(
+    //   signup({
+    //     name: form.firstName,
+    //     email: form.email,
+    //     password: form.password,
+    //     signedUp: true,
+    //   })
+    // );
 
     setLoading(true);
     axios

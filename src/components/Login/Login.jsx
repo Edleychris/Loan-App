@@ -22,7 +22,7 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
 
  
@@ -70,12 +70,12 @@ const Login = () => {
               if(response.data.status == true) {
                 navigate('/token')
 
-                dispatch(login({
-                  name: firstName,
-                  email: email,
-                  password: password,
-                  signedUp: true,
-                }))
+                // dispatch(login({
+                //   name: firstName,
+                //   email: email,
+                //   password: password,
+                //   signedUp: true,
+                // }))
               }
             })
             .catch(error => {
