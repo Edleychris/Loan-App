@@ -1,4 +1,4 @@
-import img1 from '../../../assets/user.jpg'
+import img1 from '../../../assets/user.jpg';
 import img2 from '../../../assets/Avatar (3).png';
 import msg from './message.module.css';
 import { FaFile } from 'react-icons/fa';
@@ -22,14 +22,15 @@ const Message = ({ text, user = 'other', audioURL, fileURL }) => {
   };
 
   return (
-    <div
-    className={`${msg.message01} ${user === 'me' ? msg.flexEnd : msg.flexStart}`}
-  >
-      {user === 'other' && <img src={img1} className={msg.avatar} alt="User Avatar" />}
+    <div className={`${msg.message01} ${user === 'me' ? msg.flexEnd : msg.flexStart}`}>
+      {user === 'other' ? (
+        <img src={img1} className={msg.avatar} alt="User Avatar" />
+      ) : (
+        <img src={img2} className={msg.avatar} alt="User Avatar" />
+      )}
       <div className={msg.text_messages}>
         {renderMessageContent()}
       </div>
-      {user === 'me' && <img src={img2} className={msg.avatar} alt="User Avatar" />}
     </div>
   );
 };

@@ -142,6 +142,7 @@ function UserMsg() {
     const emoji = emojiObject.emoji;
     setMessage((prevMessage) => prevMessage + emoji);
     setIsTyping(true);
+    
   };
 
   const startRecording = () => {

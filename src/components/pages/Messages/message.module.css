@@ -80,23 +80,46 @@ a{
 .flexEnd {
     display: flex;
     justify-content: flex-end;
+    align-items: flex-start;
+    background-color: pink;
+    /* max-width: 100px; */
   }
+  
   .flexEnd .avatar {
-    margin-right: 0;
-    margin-left: 10px;
+    margin-left: 10px; 
+    order: 1; 
   }
+  
+  .flexEnd .text_messages {
+    order: 0;
+    max-width: 50%;
+    height: 100%;
+  }
+  
   .flexStart {
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: purple; */
+    /* margin-top: 10px;  */
   }
+  
   .flexStart .avatar {
-    margin-left: 0;
     margin-right: 10px;
+    order: 0;
+  }
+  
+  .flexStart .text_messages {
+    order: 1;
+    max-width: 50%;
+
   }
 .message01{
-    max-width: 550px;
+    max-width: 1040px;
     display: flex;
     /* background-color: green; */
+    overflow-x: hidden;
+    width: 1040px;
     align-items: center;
 }
 .text_messages_container{
@@ -106,6 +129,7 @@ a{
     overflow-wrap: break-word;
     word-break: break-all;
     margin-left: 1rem;
+    height: 100%;
     margin-top: 5px;
 }
 .text_messages{
@@ -121,11 +145,14 @@ a{
 .user_Msg {
     position: fixed;
     margin-top: 1rem;
+    /* background-color: red; */
+    height: 100%;
 }
 .message__container1{
-    height: 500px;
+    height: 470px;
     overflow-y: scroll;
     width: 1040px;
+    margin-top: 3rem;
 }
 .user_Msg{
     width: 1040px;
@@ -141,8 +168,11 @@ a{
     width: 900px;
     border: none;
     outline: none;
-    height: 3rem;
+    /* height: 3rem; */
     font-size: 18px;
+    /* background-color: green; */
+    padding: 10px;
+    /* height: 100%; */
     
 }
 .user_Msg_input_icons{
