@@ -133,7 +133,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid grey;
+    border: 1px solid #6a8fe5;
     border-radius: 5px;
     padding: 10px;
 }
@@ -149,16 +149,16 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    line-height: 20px;
+    line-height: 2px;
     width: 65px;
     font-size: 25px;
 }
 .user_Msg_input_icon{
-    font-size: 25px;
+    font-size: 28px;
 }
 
-/* .emojiPickerContainer{
+.emojiPickerContainer{
     position: absolute;
     top: -26rem;
     left: 20rem;
-} */
+}

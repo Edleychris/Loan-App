@@ -7,6 +7,7 @@ import axios from 'axios';
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { useDispatch } from 'react-redux';
 import { signup } from '../../features/userSlice';
+import { SpinnerCircular } from 'spinners-react';
 
 const INITIAL = {
   firstName: '',
@@ -232,8 +233,8 @@ const Signup = () => {
                   </p>
                 </div>
 
-                <button type="submit" className={style.submit} disabled={loading}>
-                  Sign up
+                <button type="submit" className={style.submit} disabled={loading}> {
+                  loading ? <SpinnerCircular size={30} color='#fffff' secondaryColor='#3944BC'/> : <p>Sign up</p>}
                 </button>
               </form>
               <div className={style.login_signup}>

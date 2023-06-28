@@ -68,16 +68,16 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
             statusStyles.backgroundColor = "#33DD64"
 
           } else if (item.status === "Declined") {
-            statusStyles.backgroundColor = "red"
+            statusStyles.backgroundColor = "#DC3969"
 
          }else if (item.status === "Due"){
-           statusStyles.backgroundColor = "#F3B516"
+           statusStyles.backgroundColor = "#F5C445"
 
          } else if (item.status === "Closed"){
-         statusStyles.backgroundColor = "#6A8FE5"
+         statusStyles.backgroundColor = "#88A5EA"
 
           } else {
-            statusStyles.backgroundColor = "Orange"
+            statusStyles.backgroundColor = "#F5C445"
             
           }
 

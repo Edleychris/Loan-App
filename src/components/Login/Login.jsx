@@ -7,6 +7,7 @@ import logo from '../../assets/Group 7753.svg'
 import {BsEye, BsEyeSlash} from 'react-icons/bs'
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
+import { SpinnerCircular } from 'spinners-react';
 // import { login } from '../../features/userSlice';
 
 
@@ -20,6 +21,7 @@ const Login = () => {
     const [errPwd, setErrPwd] = useState('');
     const [errMsg, setErrMsg] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const [loading, setLoading] = useState(false)
     const navigate = useNavigate();
 
   // const dispatch = useDispatch();
@@ -50,26 +52,25 @@ const Login = () => {
             setErrPwd('Password must be at least 8 characters, including 1 uppercase, 1 symbol, and 1 digit.')
         }
      
-        axios({
+        setLoading(true)
+        setTimeout(() => {
+          axios({
             method: 'POST',
-            url: "https://loanifyteama-production.up.railway.app/api/v1/auth/login",
+            url: 'https://loanifyteama-production.up.railway.app/api/v1/auth/login',
             headers: {
               'Content-Type': 'application/json',
-            
             },
             data: {
               email: user,
               password: pwd,
-            
-            }
+            },
           })
-            .then(response => {
+            .then((response) => {
               // Handle the response data
               console.log(response.data);
               localStorage.setItem('token', response.data.token);
-              if(response.data.status == true) {
-                navigate('/token')
-
+              if (response.data.status == true) {
+                navigate('/token');
                 // dispatch(login({
                 //   name: firstName,
                 //   email: email,
@@ -78,16 +79,19 @@ const Login = () => {
                 // }))
               }
             })
-            .catch(error => {
+            .catch((error) => {
               // Handle any errors
               console.error(error);
-              if(error.message == 'Request failed with status code 404'){
-                setErrMsg('Incorrect email or password. Try again!')  
+              if (error.message == 'Request failed with status code 404') {
+                setErrMsg('Incorrect email or password. Try again!');
+              } else {
+                navigate('/token');
               }
-              else{
-                navigate('/token')
-              }
+            })
+            .finally(() => {
+              setLoading(false);
             });
+        }, 2000);
           
 
     }
@@ -128,9 +132,10 @@ const Login = () => {
                                 <input type={showPassword ? 'text' : 'password'} id='password' onChange={(e) => setPwd(e.target.value)} value={pwd} required className={styles.form_input} placeholder='Password'/>
                                 {showPassword ? (<BsEye onClick={showPwd} className={styles.login__icon}/>) : (<BsEyeSlash onClick={showPwd} className={styles.login__icon}/>)}
                                 <p className={styles.errMsg} aria-live='assertive'>{errMsg}</p>
+                               <p className={styles.errMsg}>{errPwd}</p>   
+
                             </div>
                             
-                            <p className={styles.errMsg}>{errPwd}</p>   
 
                             
 
@@ -140,7 +145,7 @@ const Login = () => {
                         </div>
 
 
-                        <button className={styles.login}>Log In</button>
+                        <button className={styles.login}>{loading ? <SpinnerCircular size={30} color='#FFFFFF' secondaryColor='#3944BC'/> : <p>Log In</p>}</button>
                     </form>
 
                         <div className={styles.signup}>

@@ -14,7 +14,7 @@
 .login__icon {
   position: absolute;
   right: 0;
-  top: 10.6rem;
+  top: 10.8rem;
   margin-right: 1rem;
 }
 .body {
@@ -141,18 +141,20 @@
   font-style: italic;
   color: rgb(2, 2, 42);
   font-weight: 700;
+  /* margin-top: 1rem; */
   font-size: 16px;
   line-height: 24px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-  margin-top: -40px;
+  margin-top: -30px;
   text-decoration: none;
 }
-
 .errMsg {
   font-size: 12px;
+  /* margin-top: 1rem; */
+  /* margin-bottom: 1rem; */
   color: red;
   /* background-color: purple; */
 }

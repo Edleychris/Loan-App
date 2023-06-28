@@ -1,195 +1,187 @@
-.clientsblock{
+.clientsblock {
   z-index: 6;
   margin-top: 12rem;
   background-color: white;
   width: 1040px;
 }
-.clientsdata___block{
+.clientsdata___block {
   background-color: white;
-color: white;
-margin-top: -1rem;
+  color: white;
+  margin-top: -1rem;
   position: fixed;
   width: 1040px;
 }
-  .clientsdata{
-      display: flex;
-    width: 1040px;
-    border: 0.5px solid #6A8FE5;
-      align-items: center;
-      color: black;
+.clientsdata {
+  display: flex;
+  width: 1040px;
+  border: 0.5px solid #6a8fe5;
+  align-items: center;
+  color: black;
   background-color: white;
   border-radius: 5px;
   justify-content: space-between;
   position: fixed;
   height: 3rem;
-  }  
-  .clientsdata011{
-    display: flex;
-    width: 1040px;
-    border: 0.5px solid #6A8FE5;
-      align-items: center;
-      color: black;
-    margin-left:.4rem;
-  /* background-color: white; */
+}
+.clientsdata011 {
+  display: flex;
+  width: 1040px;
+  border: 0.5px solid #6a8fe5;
+  align-items: center;
+  color: black;
+  margin-left: 0.4rem;
+  background-color: white;
   border-radius: 5px;
   justify-content: space-evenly;
   position: fixed;
   height: 3rem;
-  }
-  .clientsdata011 h3{
-    font-size: 14px;
-    font-weight: 700;
-    color: black;
-    width: 156px;
-    margin-right: 1rem;
 }
-  .Loan__Status{
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .5rem;
-    border-radius: 20px;
-}
-.Loan__Status1{
-  color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .5rem;
-    border-radius: 20px;
-}
-  .clientsdata h3{
-      font-size: 14px;
-      font-weight: 700;
-      color: black;
-      width: 166px;
-      /* background-color: blue; */
-      /* margin-right: 2.6rem; */
-  }
-  .checkboxIcon_1{
-    margin: 0px 14px;
+.clientsdata011 h3 {
+  font-size: 14px;
+  font-weight: 700;
   color: black;
-  margin-left: .2rem;
+  width: 156px;
+  margin-right: 1rem;
+}
+.Loan__Status {
+  color: white;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+.Loan__Status1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+.clientsdata h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+  width: 166px;
+  background-color: white;
+}
+.checkboxIcon_1 {
+  margin: 0px 14px;
+  color: black;
+  margin-left: 0.2rem;
   width: 49px;
-  }
-  .checkbox_12{
-    margin: 0px 14px;
-  margin-left: .2rem;
+}
+.checkbox_12 {
+  margin: 0px 14px;
+  margin-left: 0.2rem;
   width: 49px;
-  }
-  .checkboxIcon1{
-      margin: 0px 21px;
-    width: 49px;
-  margin-left: -.8rem;
-
-  }
-  .checkbox1{
-      margin: 0px 21px;
-    margin-left: -.8rem;
-    color: black;
+}
+.checkboxIcon1 {
+  margin: 0px 21px;
   width: 49px;
-  }
-.checkboxIcon_1_app{
+  margin-left: -0.8rem;
+}
+.checkbox1 {
+  margin: 0px 21px;
+  margin-left: -0.8rem;
+  color: black;
+  width: 49px;
+}
+.checkboxIcon_1_app {
   margin: 0px 0px;
-color: #000000;
-/* margin-left: .rem; */
-width: 39px;
+  color: #000000;
+  width: 39px;
 }
-.checkbox_12_app{
+.checkbox_12_app {
   margin: 0px 0px;
 
-width: 39px;
+  width: 39px;
 }
-.checkboxIcon1_app{
+.checkboxIcon1_app {
   width: 49px;
-    margin: 0px -30px;
-    margin-left: -1.2rem;
-
+  margin: 0px -30px;
+  margin-left: -1.2rem;
 }
-.checkbox1_app{
-    margin: 0px -30px;
+.checkbox1_app {
+  margin: 0px -30px;
   margin-left: -1.2rem;
   color: black;
-width: 49px;
+  width: 49px;
 }
 
+/* client info */
 
-
-  /* client info */
-
-.clientContainer_block_block_block{
-  padding-top: .5rem;
+.clientContainer_block_block_block {
+  padding-top: 0.5rem;
 }
-  .clientinfo{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 5vh;
-    padding: 25px 0px;
-    background-color: #F0F4FC;
-    margin-bottom: 15px;
-}
-.clientinfo__All{
+.clientinfo {
   display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 5vh;
-    padding: 25px 0px;
-    font-size: 14px;
-    background-color: #F0F4FC;
-    margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 5vh;
+  padding: 25px 0px;
+  background-color: #f0f4fc;
+  margin-bottom: 15px;
 }
-.clientinfo__All div{
-  /* width: 1200vw; */
-    width: 140px;
-    /* width: 13%; */
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    color: #010e2a;
-    font-weight: 500;
+.clientinfo__All {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 5vh;
+  padding: 25px 0px;
+  font-size: 14px;
+  background-color: #f0f4fc;
+  margin-bottom: 15px;
 }
-.clientinfo__All div:nth-child(2){
-  /* background-color: red; */
-  /* margin-left: -10px; */
+.clientinfo__All div {
+  width: 140px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #010e2a;
+  font-weight: 500;
+  background-color: #f0f4fc;
+}
+.clientinfo__All div:nth-child(2) {
   padding-right: 150px;
 }
-.clientinfo:hover{
+.clientinfo:hover {
   background-color: #8fa4d3;
 }
-.clientinfo__All:hover{
+.clientinfo__All:hover {
   background-color: #8fa4d3;
 }
-.clientContainer{
+.clientContainer {
   margin-top: 3.5rem;
 }
-.clientinfo div{
-    width: 1200vw;
-    width: 14%;
-    font-size: 14px;
-    color: #010e2a;
-    font-weight: 500;
+.clientinfo div {
+  width: 1200vw;
+  width: 14%;
+  font-size: 14px;
+  color: #010e2a;
+  font-weight: 500;
 }
-.clientinfo div:nth-child(7){
+.clientinfo div:nth-child(7) {
   width: 100px;
   margin-right: 3rem;
   padding-left: 3rem;
   padding-right: 3rem;
   color: white;
 }
-  .darkPinkText {
-    color: rgb(240, 9, 86); /* Set the desired text color for id=8 */
-  }
-  
-  .approvedBackground {
-    color: #F0F4FC;
-  }
-
-.input{
-    width: 30px;
-    margin-right: -10px;
+.darkPinkText {
+  color: rgb(240, 9, 86); 
 }
-.clientinfo div:nth-child(2){
+
+.approvedBackground {
+  color: #f0f4fc;
+}
+
+.input {
+  width: 30px;
+  margin-right: -10px;
+}
+.clientinfo div:nth-child(2) {
   margin-left: -1.4rem;
 }

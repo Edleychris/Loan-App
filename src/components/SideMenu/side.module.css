@@ -21,7 +21,7 @@
     margin-top: 15px;
   } 
   .sidebarList li:hover{
-    background-color: rgb(216, 220, 223);
+    background-color: rgb(169, 189, 209);
     color: #04297F;
   }
   .sidebarList li a{
@@ -49,7 +49,8 @@
     margin-top: 60px;
 }
 .sidebarList li a.active {
-    background-color: rgb(216, 220, 223);;
+  background-color: #F0F4FC;
+    /* background-color: rgb(216, 220, 223); */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.4s ease, color 0.3s ease, box-shadow 0.3s ease;
     color: #04297F;

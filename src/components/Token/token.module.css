@@ -67,16 +67,17 @@
 .gap{
     
     background-color: white;
-      padding: 20px 15px 24px 15px;
+      /* padding: 20px 15px 24px 15px; */
       border-radius: 10px;
 }
 
 .tokendigit{
-    width: 40px;
-    height: 20px;
+    width: 50px;
+    height: 40px;
     border-bottom: 2px solid #010E2A;
     border-radius:0%;
     text-align: center;
+    font-size: 18px;
   
 }
 
@@ -92,7 +93,7 @@
     justify-content: center;
     align-items: center;
     font-family: Helvetica;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     letter-spacing: 0px;
