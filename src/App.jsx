@@ -27,6 +27,22 @@ import { Security } from "./components/pages/SettingsPage/Security/Security";
 import ParentChangePsw from "./components/pages/SettingsPage/PopUps/ParentChangePsw";
 import Faq from "./components/pages/Support/Faq";
 import UserMsg from "./components/pages/Messages/UserMsg";
+import Overview from "./components/pages/ClientOverview/overview/Overview";
+import LoanDetails from './components/pages/ClientOverview/overview/LoanDetails';
+import RiskScore from './components/pages/ClientOverview/overview/RiskScore';
+import Documents from './components/pages/ClientOverview/overview/Documents';
+import Contract from './components/pages/ClientOverview/overview/Contract';
+import { LoanOverview } from "./components/pages/LoansOverview/LoanOverview";
+import {LoanLoanDetails }from './components/pages/LoansOverview/LoanLoanDetails';
+import {LoanRiskScore} from './components/pages/LoansOverview/LoanRiskScore';
+// import LoanDocument from './components/pages/LoansOverview/LoanDocument';
+import {LoanDocument} from './components/pages/LoansOverview/LoanDocument';
+import {LoansContract} from './components/pages/LoansOverview/LoansContract';
+import { GeneralInfo } from "./components/pages/ClientOverview/overview/GeneralInfo";
+import { LoanGeneralInfo } from "./components/pages/LoansOverview/LoanGeneralInfo";
+
+
+
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -80,24 +96,31 @@ function App() {
         <Route path="/clients" element={<Client />} />
         <Route path="/settings" element={<Settings />} />
         <Route exact path="/settings/profile" element={<ProfileSettings />} />
-        <Route
-          exact
-          path="/settings/userpermission"
-          element={<AllUserPermission />}
-        />
+        <Route exact path="/settings/userpermission" element={<AllUserPermission />}/>
         <Route exact path="/settings/notification" element={<Notification />} />
         <Route exact path="/settings/security" element={<Security />} />
-        <Route
-          exact
-          path="/settings/security/change-password"
-          element={<ParentChangePsw />}
-        />
+        <Route exact path="/settings/security/change-password" element={<ParentChangePsw />}/>
         <Route path="/reports" element={<Report />} />
         <Route path="/support" element={<Support />} />
         <Route path="/loans" element={<LoanTab />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/support/faq" element={<Faq />} />
-        <Route path="/messages/user" element={<UserMsg />} />
+        <Route path="/messages/user" element={<UserMsg />}/>
+        <Route path="/clients/overview/general" element={<Overview/>}/>
+        <Route path="/clients/overview/general" element={<GeneralInfo/>}/>
+        <Route path='/clients/overview/loan-details' element={<LoanDetails/>} />
+        <Route path='/clients/overview/risk-score' element={<RiskScore/>} />
+        <Route path='/clients/overview/documents' element={<Documents />} />
+        <Route path='/loans/loan-contract' element={<Contract />} />
+        <Route path="/loans/overview/general" element={<LoanOverview/>}/>
+        <Route path="/loans/overview/general" element={<LoanGeneralInfo/>}/>
+        <Route path='/loans/overview/loan-details' element={<LoanLoanDetails/>} />
+        <Route path='/loans/overview/risk-score' element={<LoanRiskScore/>} />
+        <Route path='/loans/overview/documents' element={<LoanDocument />} />
+        <Route path='/loans/overview/loan-contract' element={<LoansContract />} />
+        
+      
+        
       </Routes>
     )}
     </Router>

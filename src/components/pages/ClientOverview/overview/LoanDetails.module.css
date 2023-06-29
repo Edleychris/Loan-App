@@ -1,0 +1,335 @@
+/* .loanDeetsNav{
+    background-color: rgba(240, 244, 252, 1);
+    height: 40px;
+    width: 1040px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 13;
+  }
+  .loanDeetsNav a{
+    color: #000;
+  }
+  .icon{
+    margin-left: 5px;
+    margin-right: 5px;
+  } */
+
+
+.ld_body {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    /* position: absolute;
+    width: 1078px;
+    left: 260px;
+    top: 440px; */
+}
+
+.ld_divs {
+    width: 1040px;
+    height: 48px;
+    border: 0.5px solid #6A8FE5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.ld_headers {
+    /* width: 241.132px; */
+    /* width: 600px; */
+    color: var(--strokes-and-text, #010E2A);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px;
+}
+.header2 {
+    /* width: 282.671px; */
+}
+.header3 {
+    /* width: 211.75px; */
+}
+
+.ld_span {
+    width: 16.211px;
+    height: 14px;
+    /* border: 0.5px solid #04297F; */
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    cursor: pointer;
+    /* padding-right: 20px; */
+}
+
+.Iddrop_div1 {
+    width: 1040px;
+    height: 203px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    /* margin-bottom: 16px; */
+    /* background-color: yellow; */
+}
+
+.Iddrop_head {
+    height: 35px;
+    /* display: inline-flex; */
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    align-items: center;
+    /* gap: 16px; */
+    border: 0.5px solid #6A8FE5;
+    text-align: start;
+    /* background-color: green; */
+    width: 1040px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.Iddrop_head span{
+    /* background-color: red; */
+    width: 900px;
+}
+
+.Iddrop_body1 span {
+    color: var(--strokes-and-text, #010E2A);
+    font-size: 14px;
+    font-family: Helvetica;
+    /* font-weight: 700; */
+    width: 196px;
+    /* background-color: green; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.lddrop_body {
+    width: 1040px;
+    height: 153px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+.Iddrop_body1 {
+    width: 1040px;
+    height: 35px;
+    /* display: inline-flex; */
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 16px;
+    border: 0.5px solid #6A8FE5;
+    text-align: start;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.lddrop_body1 span {
+    width: 196px;
+    color: var(--strokes-and-text, #010E2A);
+    font-size: 16px;
+    font-family: Helvetica;
+    font-weight: 700;
+}
+
+/* .lddrop_num{
+    
+} */
+
+.Iddrop_body1 .Iddrop_num {
+    /* font-family: Inter; */
+    font-weight: 100;
+}
+
+.lddrop_black {
+    width: 196px;
+    height: 16px;
+    border-radius: 9999px;
+    border: 1px solid var(--strokes-and-text, #010E2A);
+    background: var(--background-color-for-selection-and-breadcrumb, #F0F4FC);
+}
+
+.lddrop_black span {
+    display: flex;
+    justify-content: center;
+    width: 172.459px;
+    height: 15px;
+    border-radius: 9999px;
+    background: var(--strokes-and-text, #010E2A);
+    color: var(--arrows-and-texts, #FFFFFE);
+    font-size: 12px;
+    font-family: Helvetica;
+    font-weight: 700;
+}
+
+.lddrop_green {
+    width: 192px;
+    height: 16px;
+    border-radius: 9999px;
+    background: var(--case-number-on-clients-profile, #297F04);
+}
+.lddrop_green span {
+    color: var(--arrows-and-texts, #FFFFFE);
+    font-size: 12px;
+    font-family: Helvetica;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+
+.lddrop_div2 {
+    width: 1040px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    /* font-family: Extatica; */
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--strokes-and-text, #010E2A);
+    margin-bottom: 16px;
+}
+
+.lddrop_div2top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.lddrop_div2 h1 {
+    display: flex;
+    /* width: 265.553px; */
+    flex-direction: column;
+    font-weight: 700;
+    text-align: start;
+    font-size: 14px;
+}
+
+.lddrop_loaninfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    /* height: 488px; */
+}
+
+.lddrop_loandata {
+    display: flex;
+    align-items: center;
+    width: 1032px;
+    justify-content: space-between;
+    text-align: start;
+}
+
+.lddrop_loan_p {
+    width: 206.553px;
+}
+
+.lddrop_loan_pl {
+    width: 300;
+}
+
+.lddrop_loandata input {
+    display: flex;
+    width: 216px;
+    height: 30px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 0.5px solid #6A8FE5;
+    background: #FFF;
+    font-size: 16px;
+    font-family: Helvetica;
+    line-height: 24px;
+}
+
+.lddrop_loandata input::placeholder{
+    font-size: 14px;
+}
+
+
+
+.lddrop_fininfo_form {
+    width: 1032px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lddrop_div2down {
+    width: 1032px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.lddrop_findiv {
+    display: flex;
+    width: 1032px;
+    height: 72px;
+    justify-content: space-between;
+}
+
+.lddrop_gross {
+    display: flex;
+    width: 216px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.lddrop_gross label {
+    color: var(--inactive-text, #717070);
+    font-size: 14px;
+    /* font-family: Helvetica; */
+    line-height: 24px;
+}
+
+.lddrop_gross input {
+    display: flex;
+    width: 216px;
+    height: 30px;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 0.5px solid #6A8FE5;
+    color: #000;
+    background: #FFF;
+    font-size: 14px;
+    font-family: Helvetica;
+    line-height: 24px;
+}
+
+.lddrop_gross input::placeholder{
+    font-size: 14px;
+}
+
+
+.lddrop_div3down {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.lddrop_div3down_btn {
+    background-color: #04297F;
+    color: #FFF;
+    width: 232px;
+    height: 35px;
+    font-size: 14px;
+    font-family: Helvetica;
+    line-height: 24px;
+    border-radius: 5px;
+    border: none;
+}

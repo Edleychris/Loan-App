@@ -32,6 +32,7 @@ export const PendingInfo = ({ selectedItems, onItemCheckChange }) => {
           const itemId = item.id;
           const itemChecked = isChecked(itemId);
             return (
+              <Link to="/loans/overview/general">
               <div key={item.id}
               className={`${style.clientinfo} ${backgroundColorClass}`}
               >
@@ -58,6 +59,7 @@ export const PendingInfo = ({ selectedItems, onItemCheckChange }) => {
           
               </div>
             </div>
+            </Link>
             )
            })}
         </div>     

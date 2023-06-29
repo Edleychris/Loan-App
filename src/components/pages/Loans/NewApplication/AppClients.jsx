@@ -4,6 +4,7 @@ import applicationdata from '../data';
 import styles from '../AllLoans/Clients.module.css';
 import css from '../AllLoans/Clients.module.css';
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
+import { Link } from 'react-router-dom';
 
 
 export const AppClients = ({ selectAll, onAllCheckChange, searchQuery, setSearchQuery, filterStatus }) => {
@@ -86,6 +87,7 @@ export const AppClients = ({ selectAll, onAllCheckChange, searchQuery, setSearch
             }
 
             return (
+              <Link to="/loans/overview/general">
               <div key={itemId} className={`${styles.clientinfo__All}`}>
                 {checkboxesChecked[index] ? (
                   <ImCheckboxChecked
@@ -115,6 +117,7 @@ export const AppClients = ({ selectAll, onAllCheckChange, searchQuery, setSearch
                   {item.status}
                 </div>
               </div>
+              </Link>
             );
           })}
         </div>

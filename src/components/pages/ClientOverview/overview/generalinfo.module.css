@@ -1,0 +1,99 @@
+.generalInfoNav{
+    background-color: rgba(240, 244, 252, 1);
+    height: 40px;
+    width: 1040px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 13;
+  }
+  .generalInfoNav a{
+    color: #000;
+  }
+  .icon{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .topBar{
+    margin-top: 4rem;
+  }
+
+  .clientProfileDashboard{
+    /* background-color: yellowgreen; */
+    width: 1040px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .clientAvatar{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+
+  .dashboardOverview{
+    /* background-color: violet; */
+    display: flex;
+    align-items: flex-start;
+    width: 850px;
+
+    /* justify-content: center; */
+    /* height: 140px; */
+  }
+
+  .clientName{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .caseId{
+    color: #297F04;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .communicationBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .communtication{
+    font-size: 15px;
+    background-color: red;
+  }
+
+  .communicationIcon{
+    color: #A90636;
+    /* font-size: 19px; */
+  }
+
+  .officer{
+    font-size: 15px;
+  }
+
+  .officer span{
+    font-weight: 600;
+  }
+
+  .aboutLoan{
+    padding-left: 14rem;
+  }
+
+  .aboutLoanType{
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+  }
+
+  .aboutLoanType span{
+    font-weight: 600;
+  }

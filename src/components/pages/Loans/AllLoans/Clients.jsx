@@ -4,6 +4,7 @@ import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
 import styles from './Clients.module.css';
 import data from './Data';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
@@ -83,6 +84,7 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
 
 
           return (
+            <Link to="/loans/overview/general">
             <div key={itemId} className={`${styles.clientinfo}`}>
               {checkboxesChecked[index] ? (
                 <ImCheckboxChecked
@@ -108,6 +110,7 @@ export const Clients = ({ searchQuery, setSearchQuery, filterStatus  }) => {
                 {item.status}
               </div>
             </div>
+            </Link>
           );
         })}
       </div>

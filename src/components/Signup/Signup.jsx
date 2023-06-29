@@ -5,15 +5,17 @@ import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/Group 7753.svg';
 import axios from 'axios';
 import { BsEye, BsEyeSlash } from "react-icons/bs";
+import Confirmation from '../Confirmation/Confirmation';
 
 
 const INITIAL = { firstName: '', lastName: '', role: '', phoneNumber: '', email: '', password: '' };
 
-const Signup = () => {
+const Signup = ({onSuccess}) => {
   const [form, setForm] = useState(INITIAL);
   const [errorUI, setErrorUI] = useState({});
   const [loading, setLoading] = useState(false);
   const [PasswordVisible, setPasswordVisible] = useState(false);
+  const [confirmationPage, setConfirmationPage] = useState(false);
   const navigate = useNavigate();
   // const [values, setValues] = useState({
   //   firstName: '',
@@ -126,7 +128,14 @@ const Signup = () => {
 
       setForm(INITIAL);
       console.log("Form submitted");
+      setConfirmationPage(true);
+      onSuccess();
       }
+
+      const handleSuccess = () => {
+        setConfirmationPage(true);
+        onSuccess();
+      };
 
   // const onChange = (e) => {
   //   setValues({ ...values, [e.target.name]: e.target.value });
@@ -206,8 +215,8 @@ const Signup = () => {
                 value={form.phoneNumber}
                 onChange={handleChange}
                 placeholder="08122222222"
-                minLength={11}
-                maxLength={11}
+                minLength={'11'}
+                maxLength={'11'}
                 className={style.signup__input}
                 required
               />
@@ -242,7 +251,7 @@ const Signup = () => {
                     Password
                   </label>
 
-                  
+                  <div className={style.passwordEyeBlock}>
                   <input
                 type={PasswordVisible ? 'text' : 'password'} 
                 id="password"
@@ -262,8 +271,8 @@ const Signup = () => {
                   className={style.signupPasswordBlock__icon}
                 />
               )}
-             
-                </div>
+              </div>
+                
                 <p className={style.error}>
               {errorUI?.password?.length ? (
                 <span style={{ color: "red" }}>
@@ -272,10 +281,15 @@ const Signup = () => {
               ) : null}
             </p>
             </div>
+            </div>
 
                 <button type="submit" className={style.submit} disabled={loading}>
                   Sign up
                 </button>
+                {confirmationPage  ? (<Confirmation onSuccess={handleSuccess}/>) : (
+                  <Signup/>
+              )}
+                // {confirmationPage && <Confirmation/>}
                 
                 {/* <div className={style.login_signup}>
                   <p className={style.logintext}>Already have an account?</p>

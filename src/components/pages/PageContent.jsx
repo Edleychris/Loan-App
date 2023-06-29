@@ -17,6 +17,7 @@ import ParentChangePsw from './SettingsPage/PopUps/ParentChangePsw';
 import Report from './Report/Report';
 import Profile from './Profile/Profile';
 import LoanTab from './Loans/LoanTab';
+import Confirmation from '../Confirmation/Confirmation';
 
 
 function PageContent() {
@@ -40,6 +41,7 @@ function PageContent() {
           <Route exact path='/reports' element={<Report/>}/>
           <Route exact path='/Profile' element={<Profile/>}/>
           <Route exact path='/loans' element={<LoanTab/>}/>
+          <Route exact path='/confirmation' element={<Confirmation/>}/>
         </Routes>
       </div>
   );

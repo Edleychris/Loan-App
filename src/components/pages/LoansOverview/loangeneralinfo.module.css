@@ -1,0 +1,221 @@
+.generalInfoNav{
+    background-color: rgba(240, 244, 252, 1);
+    height: 40px;
+    width: 1040px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 13;
+  }
+  .generalInfoNav a{
+    color: #000;
+  }
+  .icon{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .topBar{
+    margin-top: 4rem;
+  }
+
+  /* .clientProfileDashboard{
+    width: 1040px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .clientAvatar{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+  }
+
+  .dashboardOverview{
+    display: flex;
+    align-items: flex-start;
+    width: 850px;
+  }
+
+  .clientName{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .caseId{
+    color: #297F04;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .communicationBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .communtication{
+    font-size: 15px;
+  }
+
+  .communicationIcon{
+    color: #A90636;
+  }
+
+  .officer{
+    font-size: 15px;
+  }
+
+  .officer span{
+    font-weight: 600;
+  }
+
+  .aboutLoan{
+    padding-left: 14rem;
+  }
+
+  .aboutLoanType{
+    margin-bottom: 1.5rem;
+    font-size: 15px;
+  }
+
+  .aboutLoanType span{
+    font-weight: 600;
+  } */
+
+  .over-headlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    width: 1040px;
+    height: 64px;
+    left: 260px;
+    top: 290px;
+    /* border: 0.5px solid #0744D3; */
+    border: 0.5px solid #6A8FE5;
+}
+
+.over-headlinks a {
+    width: 230.91px;
+    height: 24px;
+    font-family: 'Extatica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #010E2A;
+}
+
+/* .over-headlinks .overhead-general {
+    width: 230.91px;
+} */
+
+
+.overBody {
+    /* position: absolute;
+    width: 1040px;
+    left: 260px;
+    top: 440px; */
+    margin-top: 4rem;
+    /* background-color: blue; */
+}
+
+/* .overform_div{
+    background-color: red;
+} */
+
+.overFormDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 20px; */
+}
+
+.overform_div2, .overform_div3{
+    margin-top: 1rem;
+}
+
+.overform_h1 {
+    /* width: 206.553px; */
+    color: var(--strokes-and-text, #010E2A);
+    font-size: 15px;
+    /* font-family: Extatica; */
+    font-weight: 700;
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
+.overForm {
+    width: 1040px;
+    gap: .7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.overform_div1 {
+    display: flex;
+    height: 72px;
+    justify-content: space-between;
+}
+
+.overformRows {
+    display: flex;
+    /* width: 216px; */
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 8px; */
+}
+
+.overformRows label {
+    color: var(--inactive-text, #717070);
+    font-size: 14px;
+    /* font-family: Helvetica; */
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.overformRows input {
+    width: 216px;
+    height: 33px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 0.5px solid #6A8FE5;
+    background: var(--light-gohan, #FFF);
+    color: #000;
+    font-size: 14px;
+    line-height: 24px;
+    outline: none;
+}
+
+.overformLong label{
+    margin-bottom: 5px;
+    color: var(--inactive-text, #717070);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.overformLong input {
+    display: flex;
+    margin-top: 5px;
+    width: 628px;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 33px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    /* border: 1px solid var(--export-button, #0744D3);
+    background: var(--light-gohan, #FFF); */
+    border: 0.5px solid #6A8FE5;
+    color: #000;
+    font-size: 14px;
+    line-height: 24px;
+}

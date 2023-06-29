@@ -341,7 +341,7 @@ const Client = () => {
                   onClick={() => handleCheckboxChange(index)}
                 />
               )}
-                          <Link to="/clientprofile/overview">
+                          <Link to="/clients/overview/general">
                             <div className={css.clientinfo2}>
                               {client.applicationNumber}
                             </div>

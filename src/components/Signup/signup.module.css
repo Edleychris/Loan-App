@@ -81,17 +81,45 @@
     /* padding-left: 5rem; */
 }
 
-.signupPasswordBlock__icon{
+/* .signupPasswordBlock__icon{
     position: absolute;
     right: 9rem;
     bottom: 9.3rem;  
-}
+} */
 
 
-/* .passwordEyeBlock{
+.passwordEyeBlock{
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* background-color: #0744D3; */
+    /* background-color: #0744D3; */
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.passwordEyeBlock:focus{
+    border: 1px solid #6a8fe5;
+}
+
+/* .signup__input:nth-child(6){
+    margin-right: rem;
 } */
+
+.passwordEyeBlock .signup__input{
+    /* background-color: red; */
+    width: 95%;
+    background-color: white;
+    margin-left: -0.5rem;
+
+    border-radius: 5px;
+}
+
+.passwordEyeBlock .signup__input:focus{
+    border: none;
+}
+
 
 .signup__input{
     width: 100%;
@@ -100,7 +128,7 @@
     border: none;
     background-color: white;
     border-radius: 5px;
-    position: relative;
+    /* position: relative; */
 }
 
 .signup__input:focus{
@@ -260,7 +288,7 @@ input:-webkit-autofill:active{
     color:red ;
 } */
 
-label{
+.inputFieldBlock label{
     /* font-size: 14px; */
     margin-bottom: 5px;
 

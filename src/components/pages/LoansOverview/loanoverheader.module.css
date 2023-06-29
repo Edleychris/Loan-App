@@ -1,0 +1,151 @@
+.overGeneral {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* width: 975px; */
+    height: 160px;
+    margin-top: 4rem;
+    /* background-color: blue; */
+    margin-bottom: -2rem;
+    /* position: absolute;
+    left: 260px;
+    top: 85px; */
+
+}
+
+.overgenLeft {
+    width: 588px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.overgenDet {
+    width: 372px;
+    height: 120.51px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    line-height: 18px;
+    color: #010E2A;
+    font-style: normal;
+    /* font-family: 'Helvetica'; */
+    font-size: 14px;
+}
+
+.overgenName {
+    height: 29.37px;
+    /* font-family: 'Extatica'; */
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 29px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.overgenId {
+    width: 155px;
+    height: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #297F04;
+    display: flex;
+    gap: 4px;
+}
+
+.overgenAdd {
+    /* width: rem; */
+    gap: 2rem;
+    /* height: 35.41px; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;background-color: red; */
+}
+
+.overgenAdd span{
+    display: flex;
+    gap: 5px;
+}
+
+.overgenOfficer {
+    display: flex;
+    gap: 5px;
+}
+
+.overgenOfficer .overgenOffice {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.overgenRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 260px;
+    height: 50px;
+    justify-content: space-between;
+    /* margin-top: 21px; */
+}
+
+.overgenTopActive, .overgenTopActiveStatus{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.overgenTopActive{
+    margin-bottom: .5rem;
+}
+
+.overgenTopActive .overgenSpans {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.overgenActiveDot {
+    display: flex;
+    width: 84px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overgenActiveDot .activeDot {
+    width: 20px;
+    background-color: #F3B516;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.btnsBlock{
+    margin-top: 1rem;
+}
+
+.approve, .decline{
+    width: 90px;
+    height: 40px;
+    /* padding: 8px; */
+    padding: 5px 20px;
+    align-self: center;
+    border-radius: 5px;
+    font-weight: 700;
+    /* display: flex; */
+    /* flex-direction: rows;
+    justify-content: center;
+    align-items: center; */
+}
+
+.approve{
+    border: 0.5px solid #6A8FE5;
+    color: black;
+    margin-right: 1.3rem;
+}
+
+.decline{
+    background-color: #d30744;
+    border: none;
+    color: white;
+}

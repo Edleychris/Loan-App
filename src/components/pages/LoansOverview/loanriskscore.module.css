@@ -1,0 +1,148 @@
+/* .riskScoreNav{
+    background-color: rgba(240, 244, 252, 1);
+    height: 40px;
+    width: 1040px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 13;
+  }
+  .riskScoreNav a{
+    color: #000;
+  }
+  .icon{
+    margin-left: 5px;
+    margin-right: 5px;
+  } */
+
+
+
+  .riskscore {
+    /* position: absolute;
+    top: 460px;
+    left: 259px; */
+    width: 1040px;
+    height: 473px;
+}
+
+.riskscore_top {
+    width: 823px;
+    height: 259px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.riskscore_det {
+    width: 347px;
+    height: 256px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+    /* font-family: Helvetica; */
+    line-height: 32px;
+}
+
+/* .riskscore_det_left {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+} */
+
+/* .riskscore_det_left p{
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+} */
+
+.riskscoredet_right {
+    /* width: 61px; */
+    /* height: 250px; */
+    /* display: inline-flex; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    font-size: 14px;
+    color: #00D43D;
+}
+
+.riskscore_detgreen, .riskscore_detblack {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.riskscore_detgreen p, .riskscore_detblack p{
+    margin-bottom: 1rem;
+    font-size: 14px;
+}
+
+.riskscore_detblack{
+    font-weight: 700;
+}
+
+/* .riskscore_detgreen{
+    margin-bottom: 1rem;
+} */
+
+.riskchart_grade {
+    width: 107px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-between;
+    position: absolute;
+    /* top: 103px; */
+    top: 10px;
+    left: 646px;
+}
+
+.riskchart_grade span {
+    color: #8D8787;
+    font-size: 64px;
+    /* font-family: Helvetica; */
+    line-height: 32px;
+}
+
+.riskchart_grade p {
+    color: #000;
+    font-size: 24px;
+    /* font-family: Helvetica; */
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.riskscore_line {
+    width: 1040px;
+    height: 0.5px; 
+    background: #0744D3; 
+    margin: 20px 0px;
+    margin-top: -0.5rem;
+}
+
+.riskscore_down {
+    width: 826px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    font-size: 14px;
+    /* font-family: Helvetica; */
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.riskscore_deci {
+    width: 536px;
+    height: 144px;
+    border-radius: 16px;
+    /* background: var(--background-color-for-selection-and-breadcrumb, #F0F4FC); */
+    font-size: 14px;
+    text-align: start;
+    padding-left: 16px;
+}

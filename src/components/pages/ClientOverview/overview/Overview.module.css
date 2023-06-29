@@ -1,0 +1,410 @@
+.overviewInfoNav{
+    background-color: rgba(240, 244, 252, 1);
+    height: 40px;
+    width: 1040px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-weight: 700;
+    position: fixed;
+    z-index: 13;
+  }
+  .overviewInfoNav a{
+    color: #000;
+  }
+  .icon{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+
+
+/* .over-top {} */
+
+.over-container {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 4fr;
+    position: relative;
+    height: 620px;
+}
+
+.over-navlink {
+    position: absolute;
+    width: 1040px;
+    height: 60px;
+    left: 260px;
+    top: 2px;
+    background: #F0F4FC;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.over-navlink a {
+    width: 40px;
+    height: 15px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    color: #010E2A; 
+}
+
+.over-navlink .over-icon {
+    width: 11px;
+    height: 15px;
+    opacity: 0.7;
+    margin: 0 3px;
+}
+
+.over-navlink .over-link1 {
+    width: 66px;
+}
+.over-navlink .over-link2 {
+    width: 105px;
+}
+.over-navlink .over-link3 {
+    width: 132px;
+}
+.over-navlink .over-link4 {
+    width: 84px;
+}
+.over-navlink .over-link5 {
+    width: 94px;
+}
+
+/* OverHeader styling */
+
+.overGeneral {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 975px;
+    height: 160px;
+    margin-top: 4rem;
+    /* background-color: blue; */
+    margin-bottom: -2rem;
+    /* position: absolute;
+    left: 260px;
+    top: 85px; */
+
+}
+
+.overgenLeft {
+    width: 588px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overgenDet {
+    width: 372px;
+    height: 120.51px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    line-height: 18px;
+    color: #010E2A;
+    font-style: normal;
+    font-family: 'Helvetica';
+    font-size: 14px;
+}
+
+.overgenName {
+    height: 29.37px;
+    /* font-family: 'Extatica'; */
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 29px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.overgenId {
+    width: 155px;
+    height: 16px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #297F04;
+    display: flex;
+    gap: 4px;
+}
+
+.overgenAdd {
+    /* width: rem; */
+    gap: 2rem;
+    /* height: 35.41px; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;background-color: red; */
+}
+
+.overgenAdd span{
+    display: flex;
+    gap: 5px;
+}
+
+.overgenOfficer {
+    display: flex;
+    gap: 5px;
+}
+
+.overgenOfficer .overgenOffice {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.overgenRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 260px;
+    height: 60px;
+    justify-content: space-between;
+    margin-top: 21px;
+}
+
+.overgenTopActive {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.overgenTopActive .overgenSpans {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.overgenActiveDot {
+    display: flex;
+    width: 84px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overgenActiveDot .activeDot {
+    width: 20px;
+    background-color: #00D43D;
+    height: 20px;
+    border-radius: 5px;
+}
+
+/* .BorrowerInfo{
+    background-color: blue;
+} */
+
+/* Navigation styling */
+.overview_tab_container{
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: fixed; */
+    max-height: 3px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+    width: 1040px;
+    background-color: white;
+    /* background-color: red; */
+    padding: 20px 30px 15px 30px;
+    z-index: 4;
+   }
+   .overview_tab_tabs {
+    display: flex;
+    border: 0.5px solid #6A8FE5;
+    border-radius: 5px;
+    /* background-color: #fffe; */
+    background-color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 1040px;
+    height: 59px;
+  }
+   .overview_tab_tab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 27px 1px 27px ;
+    justify-content: center;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    color: #717070;
+   }
+   .overview_tab_tab.active {
+    border-right: 1px solid #6A8FE5;
+    border-radius: 5px;
+    border-top: 1px solid #6A8FE5;
+    border-left: 1px solid #6A8FE5;
+    margin-top: 1rem;
+    padding: 10px 23px 10px 23px;
+    border-bottom: 8px solid white;
+    color: #010E2A;
+    background-color: white;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+   }
+  .client_tab_content{
+    overflow-y: scroll;
+    background-color: #fffffe;
+    /* margin-left: -.4rem; */
+  }
+
+  /* Navigation styling ends here */
+
+
+.over-headlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    position: absolute;
+    width: 1040px;
+    height: 64px;
+    left: 260px;
+    top: 290px;
+    /* border: 0.5px solid #0744D3; */
+    border: 0.5px solid #6A8FE5;
+}
+
+.over-headlinks a {
+    width: 230.91px;
+    height: 24px;
+    font-family: 'Extatica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #010E2A;
+}
+
+/* .over-headlinks .overhead-general {
+    width: 230.91px;
+} */
+
+
+.overBody {
+    /* position: absolute;
+    width: 1040px;
+    left: 260px;
+    top: 440px; */
+    margin-top: 4rem;
+    /* background-color: blue; */
+}
+
+/* .overform_div{
+    background-color: red;
+} */
+
+.overFormDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 20px; */
+}
+
+.overform_div2, .overform_div3{
+    margin-top: 1rem;
+}
+
+.overform_h1 {
+    /* width: 206.553px; */
+    color: var(--strokes-and-text, #010E2A);
+    font-size: 15px;
+    /* font-family: Extatica; */
+    font-weight: 700;
+    text-align: start;
+    margin-bottom: 1rem;
+}
+
+.overForm {
+    width: 1040px;
+    gap: .7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.overform_div1 {
+    display: flex;
+    height: 72px;
+    justify-content: space-between;
+}
+
+.overformRows {
+    display: flex;
+    /* width: 216px; */
+    flex-direction: column;
+    align-items: flex-start;
+    /* gap: 8px; */
+}
+
+.overformRows label {
+    color: var(--inactive-text, #717070);
+    font-size: 14px;
+    /* font-family: Helvetica; */
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.overformRows input {
+    width: 216px;
+    height: 33px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 0.5px solid #6A8FE5;
+    background: var(--light-gohan, #FFF);
+    color: #000;
+    font-size: 14px;
+    line-height: 24px;
+    outline: none;
+}
+
+.overformLong label{
+    margin-bottom: 5px;
+    color: var(--inactive-text, #717070);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.overformLong input {
+    display: flex;
+    margin-top: 5px;
+    width: 628px;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 33px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    /* border: 1px solid var(--export-button, #0744D3);
+    background: var(--light-gohan, #FFF); */
+    border: 0.5px solid #6A8FE5;
+    color: #000;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* .overformRows_overformLong{
+    display: flex;
+    width: 647px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+} */
+
+/* .overform-long label {
+    color: var(--inactive-text, #717070);
+    font-size: 16px;
+    font-family: Helvetica;
+    line-height: 24px;
+} */
+

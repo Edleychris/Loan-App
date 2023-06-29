@@ -4,6 +4,7 @@ import style from './AppInfo.module.css';
 import PropTypes from 'prop-types';
 import { BiCheckbox } from 'react-icons/bi';
 // import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -58,6 +59,7 @@ export const AppInfo = ({ selectedItems, onItemCheckChange }) => {
 
 
           return (
+            <Link to="/loans/overview/general">
             <div
               key={item.id}
               className={`${style.clientinfo} ${backgroundColorClass}`}
@@ -85,6 +87,7 @@ export const AppInfo = ({ selectedItems, onItemCheckChange }) => {
                 
               </div>
             </div>
+            </Link>
           );
         })}
       </div>
